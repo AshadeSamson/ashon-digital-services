@@ -1,11 +1,13 @@
-import Image from "next/image";
+import React from 'react'
 
-export default function Home() {
+function Home() {
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <h1>Welcome!</h1>
-        <h2>This is the Official Website of Ashon Digital Services</h2>
-        <p>We are Launching Soon</p>
-    </div>
-  );
+    <>
+      <h1>Welcome to Ashon Digital Services</h1>
+      <h2>We are Launching Soon!!!</h2>
+    </>
+  )
 }
+
+export default Home
