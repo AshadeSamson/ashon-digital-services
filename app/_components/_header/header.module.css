@@ -1,9 +1,9 @@
 .header{
-    @apply bg-transparent fixed top-0 left-0 w-full z-50 md:top-0;
+    @apply bg-transparent fixed top-0 left-0 w-full z-50 md:top-0 shadow-lg transition-all duration-300;
 }
 
 .headerContainer{
-    @apply flex justify-between items-center !px-3 md:!px-10 !py-3 shadow-lg transition-all duration-300;
+    @apply flex justify-between items-center !px-3 md:!px-10 !py-3;
 }
 
 .nav{

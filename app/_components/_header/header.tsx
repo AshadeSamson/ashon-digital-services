@@ -51,8 +51,9 @@ const Header = () => {
   
 
   return (
-    <header className={`${styles.header}`}>
-      <div className={`${styles.headerContainer} ${isScrolled ? 'bg-background' : 'bg-transparent'}`}>
+    <header className={`${styles.header} ${isScrolled ? 'bg-background' : 'bg-transparent'}`}>
+      <div className="container">
+      <div className={`${styles.headerContainer} }`}>
         <div className="">
             {/* Only render Image after mount */}
             {isMounted ? (
@@ -110,7 +111,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-
+    </div>
     </header>
   );
 }
