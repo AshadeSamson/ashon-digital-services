@@ -52,14 +52,14 @@ body {
 
 @media screen and (max-width: 1080px) {
   .container {
-    max-width: 96%;
+    max-width: 99%;
   }
 }
 
 
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 96%;
+    max-width: 99%;
   }
 }
 

@@ -54,19 +54,20 @@ const Header = () => {
     <header className={`${styles.header} ${isScrolled ? 'bg-background' : 'bg-transparent'}`}>
       <div className="container">
       <div className={`${styles.headerContainer} }`}>
-        <div className="">
-            {/* Only render Image after mount */}
-            {isMounted ? (
-              <Image
-                src={isDarkMode ? logo2 : logo}
-                alt="Logo"
-                className={styles.logo}
-                priority
-              />
-            ) : (
-              <div className={styles.logoPlaceholder}></div>
-            )}
-        </div>
+        <Link href="#" >
+          <div className="">
+              {isMounted ? (
+                <Image
+                  src={isDarkMode ? logo2 : logo}
+                  alt="Logo"
+                  className={styles.logo}
+                  priority
+                />
+              ) : (
+                <div className={styles.logoPlaceholder}></div>
+              )}
+          </div>
+        </Link>
 
         <nav className={`${styles.nav}`}>
           <Link href="#" className={styles.navLinks}>

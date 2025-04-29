@@ -11,7 +11,7 @@
 }
 
 .navLinks{
-    @apply  block h-full rounded-md text-foreground hover:text-primary hover:scale-50 font-semibold transition-colors duration-300;
+    @apply  block h-full rounded-md text-foreground hover:font-normal font-semibold transition-colors duration-300;
 
     display: flex; 
     align-items: center; 
@@ -24,18 +24,22 @@
     height: auto;
 }
 
+.logo:hover {
+  opacity: .85;
+}
+
 .logoPlaceholder {
-  @apply w-[150px] md:w-[250px] h-[100px] bg-transparent; 
+  @apply w-[150px] md:w-[200px] h-[80px] bg-transparent; 
 }
 
 .mobileMenu {
-    @apply absolute top-1 left-0 w-full h-0 bg-background overflow-hidden transition-all duration-300 ease-in-out;
-    margin-top: 100px; 
+    @apply absolute top-14 left-0 w-2/3 h-0 bg-background overflow-hidden transition-all duration-300 ease-in-out;
+    margin-top: 5px; 
     z-index: 40;
 }
   
   .mobileMenuOpen {
-    @apply h-auto py-20;
+    @apply h-auto py-12;
     min-height: 100vh;
 }
   
