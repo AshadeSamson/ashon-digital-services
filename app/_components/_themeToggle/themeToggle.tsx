@@ -1,9 +1,11 @@
 "use client";
-
-import { useDarkMode } from '@/app/context/themeContext';
+import React from 'react';
+import { useDarkMode } from '@/app/_context/themeContext';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
+
 export const ThemeToggle = () => {
+  
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (

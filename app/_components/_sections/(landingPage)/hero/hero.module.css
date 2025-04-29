@@ -1,0 +1,9 @@
+.hero {
+    @apply relative bg-fixed bg-no-repeat bg-center bg-cover w-full h-screen;
+    background-image: url(/images/hero-bg.jpg);
+  }
+
+.hero::after {
+    @apply absolute inset-0 bg-black bg-opacity-50;
+    content: "";
+  }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { ThemeProvider } from "./context/themeContext";
-import { ThemeToggle } from "./components/themeToggle/themeToggle";
+import { ThemeProvider } from "./_context/themeContext";
+import { ThemeToggle } from "./_components/_themeToggle/themeToggle";
+import Header from "./_components/_header/header";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -25,11 +26,9 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={`${poppins.className}  antialiased`}>
+      <body className={`relative ${poppins.className}  antialiased`}>
         <ThemeProvider>
-          <header>
-            <ThemeToggle />
-          </header>
+          <Header />
           <main>
             {children}
           </main>
