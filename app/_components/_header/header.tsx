@@ -51,14 +51,14 @@ const Header = () => {
   
 
   return (
-    <header className={`${styles.header} ${isScrolled ? 'bg-background' : 'bg-transparent'}`}>
+    <header className={`${styles.header}`}>
       <div className="container">
       <div className={`${styles.headerContainer} }`}>
         <Link href="#" >
           <div className="">
               {isMounted ? (
                 <Image
-                  src={isDarkMode ? logo2 : logo}
+                  src={logo2}
                   alt="Logo"
                   className={styles.logo}
                   priority
@@ -79,9 +79,9 @@ const Header = () => {
           <Link href="#" className={styles.navLinks}>
             Talk to Us
           </Link>
-          <Link href="#">
+          {/* <Link href="#">
             <ThemeToggle />
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Mobile Hamburger Button */}
@@ -89,7 +89,7 @@ const Header = () => {
           onClick={() => setMobileMenu(!mobileMenu)}
           aria-label="Toggle menu"
         >
-          <IconContext.Provider value={{ className: "text-foreground text-3xl" }}>
+          <IconContext.Provider value={{ className: "text-white text-3xl" }}>
           {mobileMenu ? <LuListX /> : <LuAlignJustify />}
           </IconContext.Provider>
         </button>
@@ -107,9 +107,9 @@ const Header = () => {
           <Link href="#" className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             Talk to Us
           </Link>
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <ThemeToggle />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
