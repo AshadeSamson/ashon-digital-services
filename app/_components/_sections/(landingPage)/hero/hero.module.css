@@ -1,9 +1,38 @@
 .hero {
-    @apply relative bg-fixed bg-no-repeat bg-center bg-cover w-full h-screen;
-    background-image: url(/images/hero-bg.jpg);
+    @apply relative bg-fixed w-full min-h-screen flex flex-col justify-center items-center text-center px-4 py-8 md:py-16;
+    background: linear-gradient(to bottom right, rgb(var(--primary)), rgb(var(--black)) ); 
   }
 
-.hero::after {
-    @apply absolute inset-0 bg-black bg-opacity-50;
-    content: "";
-  }
+
+.heading {
+  @apply text-4xl md:text-5xl font-bold text-white leading-tight;
+}
+
+.highlight {
+  background-color: rgb(var(--brown));
+  padding: 0 5px;
+}
+.subheading {
+  @apply text-lg md:text-xl text-palewhite mt-4 max-w-2xl;
+}
+.ctaGroup {
+  @apply mt-8 flex flex-col sm:flex-row gap-4;
+}
+.button {
+  @apply px-6 py-3 rounded-lg bg-primary text-black  shadow-lg hover:bg-brown font-medium transition-all;
+}
+.outlineButton {
+  @apply px-6 py-3 rounded-lg border border-white text-white hover:bg-black font-medium transition-all;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+}

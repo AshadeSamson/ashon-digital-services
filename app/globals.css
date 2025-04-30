@@ -12,12 +12,22 @@
   --background: 255 255 240;
   --foreground: 6 6 6;
   --primary: 0 91 255;
+  --secondary: 88 188 130;
+  --white: 255 255 240;
+  --black: 6 6 6;
+  --brown: 224 109 6;
+  --pale-white: 212 212 212;
 }
 
 .dark {
   --background: 6 6 6;
   --foreground: 255 255 240;
   --primary: 0 91 255;
+  --secondary: 88 188 130;
+  --white: 255 255 240;
+  --black: 6 6 6;
+  --brown: 224 109 6;
+  --pale-white: 232 232 232;
 }
 
 body {
