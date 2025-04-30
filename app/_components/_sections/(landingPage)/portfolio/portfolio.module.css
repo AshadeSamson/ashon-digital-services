@@ -1,0 +1,74 @@
+/* components/Portfolio.module.css */
+
+.portfolioSection {
+  @apply py-20 bg-white;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.headerText {
+  @apply text-center mb-16;
+}
+
+.subtitle {
+  @apply text-primary font-semibold text-lg;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold mt-2 mb-4;
+}
+
+.description {
+  @apply max-w-2xl mx-auto text-gray-600;
+}
+
+.projectsGrid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.projectCard {
+  @apply relative overflow-hidden rounded-xl shadow-lg;
+  /* Keep 'group' in JSX */
+}
+
+.projectImage {
+  @apply w-full h-64 object-cover transition duration-500;
+}
+
+.overlayGradient {
+  @apply absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80;
+}
+
+.projectContent {
+  @apply absolute bottom-0 left-0 p-6 text-white;
+}
+
+.projectCategory {
+  @apply text-sm text-secondary font-medium;
+}
+
+.projectTitle {
+  @apply text-xl font-bold mt-1;
+}
+
+.projectDescription {
+  @apply text-sm opacity-80 mt-2;
+}
+
+.hoverOverlay {
+  @apply absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 bg-black bg-opacity-60;
+}
+
+.ctaButton {
+  @apply bg-white text-primary px-6 py-2 rounded-md font-medium transition duration-300;
+}
+
+.viewAllWrapper {
+  @apply text-center mt-12;
+}
+
+.viewAllButton {
+  @apply inline-flex items-center px-6 py-3 border border-primary text-base font-medium rounded-md shadow-sm text-primary bg-white transition duration-300;
+}

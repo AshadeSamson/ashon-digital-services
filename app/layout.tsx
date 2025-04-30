@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "./_context/themeContext";
-import { ThemeToggle } from "./_components/_themeToggle/themeToggle";
 import Header from "./_components/_header/header";
 import "./globals.css";
 
@@ -12,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Ashon Digital Services",
-  description: "Web & Software Development Services Provider",
+  description: "Web Development Services Provider",
   keywords:
     'web development, web design, javascript, react, node, angular, vue, html, css, wordpress, typescript',
 };
