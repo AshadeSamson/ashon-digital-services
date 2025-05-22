@@ -17,6 +17,8 @@
   --black: 6 6 6;
   --brown: 224 109 6;
   --pale-white: 212 212 212;
+  --whatsapp-green: #25D366;
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 .dark {
