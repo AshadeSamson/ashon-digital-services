@@ -1,0 +1,48 @@
+.faqContainer {
+  @apply bg-[rgb(255_255_240)] py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+}
+
+.header {
+  @apply text-center mb-12;
+}
+
+.subtitle {
+  @apply text-secondary font-semibold text-lg tracking-wide;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold mt-2 text-[rgb(6_6_6)];
+}
+
+.faqList {
+  @apply max-w-3xl mx-auto space-y-4;
+}
+
+.faqItem {
+  @apply bg-white rounded-lg shadow-sm border border-[rgb(212_212_212)] overflow-hidden transition-all duration-300;
+}
+
+.question {
+  @apply flex justify-between items-center cursor-pointer px-6 py-4 text-[rgb(6_6_6)] font-medium text-base hover:bg-[rgb(245_245_255)];
+}
+
+.icon {
+  @apply text-[rgb(0_91_255)] ml-4 text-lg;
+}
+
+.answer {
+  @apply px-6 pb-4 text-sm text-gray-600 leading-relaxed;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

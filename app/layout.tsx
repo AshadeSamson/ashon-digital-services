@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "./_context/themeContext";
 import Header from "./_components/_header/header";
+import Footer from "./_components/_footer/footer";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -31,6 +32,7 @@ export default function RootLayout({
           <main>
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

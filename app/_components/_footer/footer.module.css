@@ -1,0 +1,79 @@
+.footer {
+  @apply bg-[rgb(6_6_6)] text-gray-300;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.gridBox {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.branding {
+  @apply flex items-center mb-4;
+}
+
+.codeIcon {
+  @apply text-[rgb(0_91_255)] text-2xl mr-2;
+}
+
+.logoText {
+  @apply text-xl font-bold text-white;
+}
+
+.logoHighlight {
+  color: var(--primary);
+}
+
+.tagline {
+  @apply mb-4;
+}
+
+.socialIcons {
+  @apply flex space-x-4;
+}
+
+.socialIcons a {
+  @apply text-gray-400 hover:text-white transition duration-300;
+}
+
+.columnTitle {
+  @apply text-white font-semibold text-lg mb-4;
+}
+
+.linkList {
+  @apply space-y-2;
+}
+
+.linkList a {
+  @apply hover:text-white transition duration-300;
+}
+
+.contactList {
+  @apply space-y-2;
+}
+
+.contactList li {
+  @apply flex items-start;
+}
+
+.icon {
+  @apply text-[rgb(0_91_255)] mt-1 mr-3;
+}
+
+.bottomBar {
+  @apply border-t border-gray-800 mt-12 pt-8 md:flex md:items-center md:justify-between;
+}
+
+.bottomBar p {
+  @apply text-sm text-gray-400;
+}
+
+.policyLinks {
+  @apply mt-4 md:mt-0 flex gap-4;
+}
+
+.policyLinks a {
+  @apply text-sm text-gray-400 hover:text-white transition duration-300;
+}

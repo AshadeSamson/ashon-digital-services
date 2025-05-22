@@ -1,0 +1,59 @@
+.section {
+  @apply py-20 bg-[rgb(245_245_245)];
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.header {
+  @apply text-center mb-16;
+}
+
+.subtitle {
+  @apply text-[rgb(88_188_130)] font-semibold uppercase tracking-wide;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold mt-2 text-[rgb(6_6_6)];
+}
+
+.highlight {
+  color: rgb(0 91 255);
+}
+
+.description {
+  @apply mt-4 max-w-2xl mx-auto text-gray-500;
+}
+
+.gridBox {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-8;
+}
+
+.card {
+  @apply bg-white p-6 rounded-xl shadow-md transition duration-300;
+}
+
+.iconCircle {
+  @apply w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-[rgb(232_240_255)];
+}
+
+.stepNumber {
+  @apply text-[rgb(0_91_255)] font-bold;
+}
+
+.cardTitle {
+  @apply text-lg font-semibold text-[rgb(6_6_6)] mb-2;
+}
+
+.cardText {
+  @apply text-gray-500 text-sm;
+}
+
+.ctaWrapper {
+  @apply mt-12 text-center;
+}
+
+.ctaButton {
+  @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[rgb(0_91_255)] hover:bg-[rgb(0_75_220)] transition duration-300;
+}

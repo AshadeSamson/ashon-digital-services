@@ -1,0 +1,63 @@
+.signup {
+  @apply py-20 px-4 bg-[rgb(0_91_255)] text-[rgb(255_255_240)];
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+.content {
+  @apply flex flex-col justify-center md:w-2/5;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold mb-4;
+}
+
+.description {
+  @apply text-lg text-[rgb(212_212_212)] mb-6 leading-relaxed;
+}
+
+.buttonContainer {
+  @apply mt-4;
+}
+
+.contactbutton {
+  @apply inline-block bg-[rgb(255_255_240)] text-[rgb(0_91_255)] font-medium px-6 py-3 rounded-md transition duration-300;
+}
+
+.contactbutton:hover {
+  @apply bg-[rgb(212_212_212)] font-semibold;
+}
+
+.formContainer {
+  @apply md:w-2/5;
+}
+
+.formWrapper {
+  @apply bg-white text-[rgb(6_6_6)] rounded-xl shadow-lg p-6;
+}
+
+.formTitle {
+  @apply text-xl font-semibold mb-6;
+}
+
+.form {
+  @apply flex flex-col gap-4;
+}
+
+.formGroup {
+  @apply flex flex-col;
+}
+
+.formLabel {
+  @apply text-sm font-medium mb-2;
+}
+
+.formInput {
+  @apply border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[rgb(0_91_255)] focus:border-transparent;
+}
+
+.submitButton {
+  @apply w-full mt-2 bg-[rgb(0_91_255)] text-[rgb(255_255_240)] py-3 rounded-md font-medium hover:bg-[rgb(0_70_200)] transition duration-300 flex items-center justify-center;
+}
