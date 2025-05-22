@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "./_context/themeContext";
 import Header from "./_components/_header/header";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ['400', '700'],
+const openSans = Open_Sans({
+  weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={`relative ${poppins.className}  antialiased`}>
+      <body className={`relative ${openSans.className}  antialiased`}>
         <ThemeProvider>
           <Header />
           <main>
