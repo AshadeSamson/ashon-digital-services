@@ -1,9 +1,12 @@
-const LoadingPage = () => {
+import styles from './loading.module.css';
+
+const Loading = () => {
     return (
-      <div className='loader'>
-        <div className='spinner'></div>
-      </div>
+    <div className={styles.overlay}>
+      <div className={styles.spinner}></div>
+      <p className={styles.loadingText}>Loading...</p>
+    </div>
     );
   };
 
-  export default LoadingPage;
+  export default Loading;
