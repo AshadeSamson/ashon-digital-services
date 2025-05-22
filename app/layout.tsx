@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'web development, web design, javascript, react, node, angular, vue, html, css, wordpress, typescript',
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
