@@ -1,5 +1,3 @@
-/* components/Portfolio.module.css */
-
 .portfolioSection {
   @apply py-20 bg-white;
 }
@@ -46,7 +44,7 @@
 }
 
 .projectCategory {
-  @apply text-sm text-secondary font-medium;
+  @apply text-sm text-brown font-medium;
 }
 
 .projectTitle {
