@@ -9,27 +9,27 @@
 }
 
 :root {
-  --background: 255 255 240;
+  --background: 248 248 255;
   --foreground: 6 6 6;
   --primary: 0 91 255;
   --secondary: 88 188 130;
-  --white: 255 255 240;
+  --white: 248 248 255;
   --black: 6 6 6;
   --brown: 224 109 6;
-  --pale-white: 212 212 212;
+  --pale-white: 243 244 246;
   --whatsapp-green: #25D366;
   --shadow: rgba(0, 0, 0, 0.2);
 }
 
 .dark {
   --background: 6 6 6;
-  --foreground: 255 255 240;
+  --foreground: 248 248 255;
   --primary: 0 91 255;
   --secondary: 88 188 130;
-  --white: 255 255 240;
+  --white: 248 248 255;
   --black: 6 6 6;
   --brown: 224 109 6;
-  --pale-white: 232 232 232;
+  --pale-white: 243 244 246;
 }
 
 body {
