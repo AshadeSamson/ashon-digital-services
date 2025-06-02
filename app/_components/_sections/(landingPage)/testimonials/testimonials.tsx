@@ -49,11 +49,11 @@ const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className={styles.section}>
       <div className={`${styles.header} fade-in`}>
-        <h2 className={styles.heading}>
+        <h3 className={styles.title}>
           Client <span className={styles.highlight}>Testimonials</span>
-        </h2>
-        <p className={styles.subtext}>
-          Don't just take our word for it. Here's what our clients say about working with us.
+        </h3>
+        <p className={styles.description}>
+          Here's what our clients say about working with us.
         </p>
       </div>
 

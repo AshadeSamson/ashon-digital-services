@@ -11,11 +11,11 @@ const steps = [
   },
   {
     title: 'Planning',
-    description: 'We create detailed project plans, wireframes, and technical specifications.',
+    description: 'We create detailed project plans, wireframes, and specifications.',
   },
   {
-    title: 'Development',
-    description: 'Our team builds your solution with clean, efficient code following best practices.',
+    title: 'Implementation',
+    description: 'We get to work, and provide constant updates and feedback while at it.',
   },
   {
     title: 'Launch',
@@ -28,7 +28,6 @@ const Process: React.FC = () => {
     <section id="process" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.subtitle}>Our Methodology</span>
           <h2 className={styles.title}>
             Our <span className={styles.highlight}>Development</span> Process
           </h2>

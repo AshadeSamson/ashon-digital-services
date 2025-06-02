@@ -52,12 +52,7 @@
 }
 
 .button {
-  @apply px-8 py-3 rounded-md text-white font-medium;
-  background-image: linear-gradient(to right, rgb(0 91 255), rgb(0 91 255));
-}
-
-.button:hover {
-  background: rgb(6 6 6);
+  @apply inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-black transition duration-300;
 }
 
 .imageContainer {

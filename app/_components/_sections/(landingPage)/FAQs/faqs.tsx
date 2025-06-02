@@ -42,8 +42,8 @@ const Faqs = () => {
   return (
     <section className={styles.faqContainer} id="faqs">
       <div className={styles.header}>
-        <h2 className={styles.subtitle}>FAQs</h2>
         <h3 className={styles.title}>Frequently Asked Questions</h3>
+        <p className={styles.description}>lorem ipsum lorem ipsum lorem ipsum lorem ipsun</p>
       </div>
       <div className={styles.faqList}>
         {faqs.map((faq, index) => (
