@@ -1,5 +1,5 @@
 .servicesSection {
-  @apply py-20 bg-palewhite text-black;
+  @apply py-12 md:py-20 bg-white text-black;
 }
 
 .container {
@@ -7,15 +7,15 @@
 }
 
 .headerText {
-  @apply text-center mb-12;
+  @apply text-center mb-12 px-5 sm:px-0;
 }
 
 .title {
-  @apply text-3xl md:text-4xl font-bold mt-2 mb-4 text-primary;
+  @apply text-4xl md:text-5xl font-extrabold mt-2 mb-2 md:mb-4 text-black;
 }
 
 .description {
-  @apply max-w-2xl mx-auto text-gray-600;
+  @apply max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed;
 }
 
 .cardsGrid {
@@ -23,11 +23,11 @@
 }
 
 .serviceCard {
-  @apply bg-white shadow-lg rounded-lg p-6 text-left space-y-4 hover:shadow-xl transition;
+  @apply bg-palewhite shadow-lg rounded-lg p-6 text-left space-y-4 hover:shadow-xl transition;
 }
 
 .iconWrapper {
-  @apply w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl;
+  @apply w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white text-2xl;
 }
 
 .primary {
@@ -52,6 +52,10 @@
 
 .yellow {
   background-color: rgb(234, 179, 8);
+}
+
+.serviceTitle{
+  @apply text-lg font-bold text-black;
 }
 
 .learnMore {

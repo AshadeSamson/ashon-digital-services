@@ -5,37 +5,37 @@ import { FaCode, FaMobileAlt, FaSearchDollar, FaShoppingCart, FaServer, FaChartL
 const services = [
   {
     title: 'Custom Web Development',
-    description: 'Bespoke web applications built with modern frameworks like React, Vue, and Node.js for optimal performance.',
+    description: 'Bespoke web applications built with modern frameworks like React and Node.js for optimal performance.',
     icon: <FaCode />, 
     color: 'primary'
   },
   {
-    title: 'Responsive Design',
+    title: 'E-Commerce Solutions',
+    description: 'Online stores with secure checkout, inventory management, and conversion optimization.',
+    icon: <FaShoppingCart />, 
+    color: 'brown'
+  },
+  {
+    title: 'Responsive Web Design',
     description: 'Mobile-first designs that adapt seamlessly to any device, ensuring perfect user experience everywhere.',
     icon: <FaMobileAlt />, 
     color: 'purple'
   },
   {
     title: 'SEO Optimization',
-    description: 'Technical SEO and content strategy to boost search rankings and organic traffic.',
+    description: 'Technical SEO and strategy to drive your business to top of search rankings and boost organic traffic.',
     icon: <FaSearchDollar />, 
     color: 'green'
   },
   {
-    title: 'E-Commerce Solutions',
-    description: 'Online stores with secure payment gateways, inventory management, and conversion optimization.',
-    icon: <FaShoppingCart />, 
-    color: 'brown'
-  },
-  {
-    title: 'Web Hosting',
-    description: 'High-speed hosting with backups, SSL, and 24/7 technical support.',
+    title: 'Web Maintenance & Support',
+    description: 'Ongoing updates, performance optimization, and reliable support to keep you running smoothly.',
     icon: <FaServer />, 
     color: 'yellow'
   },
   {
-    title: 'Performance Optimization',
-    description: 'Improve speed and performance with advanced optimization techniques.',
+    title: 'Landing Pages & Sales Funnels',
+    description: 'Conversion-optimized landing pages designed for lead generation and sales.',
     icon: <FaChartLine />, 
     color: 'secondary'
   }
@@ -56,9 +56,8 @@ const Services: React.FC = () => {
               <div className={`${styles.iconWrapper} ${styles[service.color]}`}>
                 {service.icon}
               </div>
-              <h3>{service.title}</h3>
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p>{service.description}</p>
-              <a href="#" className={styles.learnMore}>Learn more <FaArrowRight /></a>
             </div>
           ))}
         </div>

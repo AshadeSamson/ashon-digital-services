@@ -1,21 +1,21 @@
 .faqContainer {
-  @apply bg-[rgb(255_255_240)] py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  @apply bg-white py-12 md:py-20 px-4 sm:px-6 lg:px-8 mx-auto;
 }
 
 .header {
   @apply text-center mb-12;
 }
 
-.subtitle {
-  @apply text-secondary font-semibold text-lg tracking-wide;
+.description {
+  @apply max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed;
 }
 
 .title {
-  @apply text-3xl md:text-4xl font-bold mt-2 text-[rgb(6_6_6)];
+  @apply text-4xl md:text-5xl font-extrabold mt-2 mb-2 md:mb-4 text-black;
 }
 
 .faqList {
-  @apply max-w-3xl mx-auto space-y-4;
+  @apply max-w-4xl mx-auto space-y-4;
 }
 
 .faqItem {
@@ -23,11 +23,11 @@
 }
 
 .question {
-  @apply flex justify-between items-center cursor-pointer px-6 py-4 text-[rgb(6_6_6)] font-medium text-base hover:bg-[rgb(245_245_255)];
+  @apply flex justify-between items-center cursor-pointer px-6 py-4 text-black font-medium text-base hover:bg-palewhite;
 }
 
 .icon {
-  @apply text-[rgb(0_91_255)] ml-4 text-lg;
+  @apply text-primary ml-4 text-lg;
 }
 
 .answer {
