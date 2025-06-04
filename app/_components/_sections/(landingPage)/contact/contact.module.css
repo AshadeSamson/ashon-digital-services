@@ -1,5 +1,6 @@
 .signup {
-  @apply py-20 px-4 bg-[rgb(0_91_255)] text-[rgb(255_255_240)];
+  @apply py-12 md:py-20 px-4 text-white;
+  background: linear-gradient(to bottom right, rgb(var(--primary)), rgb(var(--black)) );
 }
 
 .container {
@@ -7,15 +8,15 @@
 }
 
 .content {
-  @apply flex flex-col justify-center md:w-2/5;
+  @apply flex flex-col justify-center;
 }
 
 .title {
-  @apply text-3xl md:text-4xl font-bold mb-4;
+  @apply text-4xl md:text-5xl text-left font-extrabold mt-2 mb-4;
 }
 
 .description {
-  @apply text-lg text-[rgb(212_212_212)] mb-6 leading-relaxed;
+  @apply text-lg text-palewhite mb-6 leading-relaxed;
 }
 
 .buttonContainer {
@@ -23,11 +24,7 @@
 }
 
 .contactbutton {
-  @apply inline-block bg-[rgb(255_255_240)] text-[rgb(0_91_255)] font-medium px-6 py-3 rounded-md transition duration-300;
-}
-
-.contactbutton:hover {
-  @apply bg-[rgb(212_212_212)] font-semibold;
+    @apply inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary bg-white hover:bg-black hover:text-white transition duration-300
 }
 
 .formContainer {
@@ -35,11 +32,11 @@
 }
 
 .formWrapper {
-  @apply bg-white text-[rgb(6_6_6)] rounded-xl shadow-lg p-6;
+  @apply bg-white text-black rounded-xl shadow-lg p-6;
 }
 
 .formTitle {
-  @apply text-xl font-semibold mb-6;
+  @apply text-xl font-bold mb-6;
 }
 
 .form {
@@ -51,13 +48,13 @@
 }
 
 .formLabel {
-  @apply text-sm font-medium mb-2;
+  @apply text-sm font-bold mb-2;
 }
 
 .formInput {
-  @apply border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[rgb(0_91_255)] focus:border-transparent;
+  @apply bg-palewhite border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-full max-w-sm mb-2;
 }
 
 .submitButton {
-  @apply w-full mt-2 bg-[rgb(0_91_255)] text-[rgb(255_255_240)] py-3 rounded-md font-medium hover:bg-[rgb(0_70_200)] transition duration-300 flex items-center justify-center;
+  @apply w-full mt-2 bg-primary text-white py-3 rounded-md font-medium hover:bg-black transition duration-300 flex items-center justify-center;
 }

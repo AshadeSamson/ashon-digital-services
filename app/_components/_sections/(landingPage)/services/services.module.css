@@ -18,6 +18,11 @@
   @apply max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed;
 }
 
+.highlight {
+  color: rgb(0 91 255);
+}
+
+
 .cardsGrid {
   @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
 }

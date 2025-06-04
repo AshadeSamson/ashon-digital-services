@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { FaEnvelope, FaUser, FaCommentDots } from 'react-icons/fa';
+import { FaEnvelope, FaUser, FaCommentDots, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import styles from './contact.module.css';
 
 const Contact: React.FC = () => {
@@ -9,6 +9,7 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     service: '',
+    mobile: '',
     message: '',
   });
 
@@ -30,12 +31,12 @@ const Contact: React.FC = () => {
       <div className={styles.container}>
         <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-8">
           <div className={styles.content}>
-            <h2 className={styles.title}>Ready to Start Your Journey?</h2>
+            <h3 className={styles.title}>Ready to Own Your Web Presence?</h3>
             <p className={styles.description}>
               Take the first step toward better mental health today. Our team is here to support you every step of the way.
             </p>
             <div className={styles.buttonContainer}>
-              <a className={styles.contactbutton}>Sign Up Now</a>
+              <a className={styles.contactbutton}>Work With Us <FaArrowRight className="ml-2" /></a>
             </div>
           </div>
 
@@ -46,30 +47,51 @@ const Contact: React.FC = () => {
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.formLabel}>Full Name</label>
                   <div className="relative">
-                    <FaUser className="absolute top-3 left-3 text-gray-400" />
+                    <FaUser className="absolute top-3 left-3 text-gray-500" />
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className={`${styles.formInput} pl-10`}
+                      className={`${styles.formInput} !pl-10`}
                       placeholder="Your name"
                       value={formData.name}
                       onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="email" className={styles.formLabel}>Email</label>
                   <div className="relative">
-                    <FaEnvelope className="absolute top-3 left-3 text-gray-400" />
+                    <FaEnvelope className="absolute top-3 left-3 text-gray-500" />
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className={`${styles.formInput} pl-10`}
+                      className={`${styles.formInput} !pl-10`}
                       placeholder="you@example.com"
                       value={formData.email}
                       onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="mobile" className={styles.formLabel}>Whatsapp Number</label>
+                  <div className="relative">
+                    <FaWhatsapp className="absolute top-3 left-3 text-gray-500" />
+                    <input
+                      type="tel"
+                      id="mobile"
+                      name="mobile"
+                      className={`${styles.formInput} !pl-10`}
+                      placeholder="+1 234 567 8900"
+                      min={10}
+                      maxLength={20}
+                      pattern="[\+0-9\-\(\)\s]{10,20}" 
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
@@ -102,7 +124,7 @@ const Contact: React.FC = () => {
                   ></textarea>
                 </div>
                 <button type="submit" className={styles.submitButton}>
-                  <FaCommentDots className="inline mr-2" /> Message Us
+                  Message Us &nbsp; <FaCommentDots className="inline mr-2" />
                 </button>
               </form>
             </div>

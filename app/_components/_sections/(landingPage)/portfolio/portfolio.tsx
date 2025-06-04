@@ -9,7 +9,9 @@ const Portfolio = () => {
     <section id="work" className={styles.portfolioSection}>
       <div className={styles.container}>
         <div className={styles.headerText}>
-          <h2 className={styles.title}>Showcase Of Our Recent Work</h2>
+          <h2 className={styles.title}>
+            Our Recent Works
+          </h2>
           <p className={styles.description}>Each project is a unique challenge we embrace to deliver exceptional results.</p>
         </div>
 
