@@ -11,9 +11,7 @@
 }
 
 .highlight {
-  background-image: linear-gradient(to right, rgb(0 91 255), rgb(88 188 130));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(0 91 255);
 }
 
 .description {

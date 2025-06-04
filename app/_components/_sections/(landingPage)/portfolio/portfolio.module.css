@@ -1,5 +1,5 @@
 .portfolioSection {
-  @apply py-20 bg-white;
+  @apply py-12 md:py-20 bg-white;
 }
 
 .container {
@@ -15,11 +15,11 @@
 }
 
 .title {
-  @apply text-3xl md:text-4xl font-bold mt-2 mb-4;
+  @apply text-4xl md:text-5xl font-extrabold mt-2 mb-2 md:mb-4 text-black;
 }
 
 .description {
-  @apply max-w-2xl mx-auto text-gray-600;
+  @apply max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed;
 }
 
 .projectsGrid {
@@ -28,7 +28,6 @@
 
 .projectCard {
   @apply relative overflow-hidden rounded-xl shadow-lg;
-  /* Keep 'group' in JSX */
 }
 
 .projectImage {

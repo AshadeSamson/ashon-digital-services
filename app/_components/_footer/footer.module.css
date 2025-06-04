@@ -1,5 +1,5 @@
 .footer {
-  @apply bg-[rgb(6_6_6)] text-gray-300;
+  @apply bg-black text-gray-300;
 }
 
 .container {
@@ -7,15 +7,15 @@
 }
 
 .gridBox {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+  @apply grid grid-cols-1 md:grid-cols-3 gap-10;
 }
 
 .branding {
-  @apply flex items-center mb-4;
+  @apply flex justify-center md:justify-normal items-center mb-2;
 }
 
 .codeIcon {
-  @apply text-[rgb(0_91_255)] text-2xl mr-2;
+  @apply w-5 mr-3;
 }
 
 .logoText {
@@ -39,7 +39,7 @@
 }
 
 .columnTitle {
-  @apply text-white font-semibold text-lg mb-4;
+  @apply text-white font-semibold text-lg mb-2;
 }
 
 .linkList {
@@ -55,15 +55,15 @@
 }
 
 .contactList li {
-  @apply flex items-start;
+  @apply flex items-center md:items-start justify-center md:justify-start;
 }
 
 .icon {
-  @apply text-[rgb(0_91_255)] mt-1 mr-3;
+  @apply text-primary mt-1 mr-3;
 }
 
 .bottomBar {
-  @apply border-t border-gray-800 mt-12 pt-8 md:flex md:items-center md:justify-between;
+  @apply border-t border-gray-800 mt-12 pt-8 text-center md:flex md:items-center md:justify-between;
 }
 
 .bottomBar p {
