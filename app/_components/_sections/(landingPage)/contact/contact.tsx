@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaUser, FaCommentDots, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import styles from './contact.module.css';
+import Link from 'next/link';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +37,12 @@ const Contact: React.FC = () => {
               Take the first step toward better mental health today. Our team is here to support you every step of the way.
             </p>
             <div className={styles.buttonContainer}>
-              <a className={styles.contactbutton}>Work With Us <FaArrowRight className="ml-2" /></a>
+              <Link href="https://wa.link/1uww5s" 
+                    className={styles.contactbutton}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                      DM Us on WhatsApp
+                      <FaArrowRight className="ml-2" /></Link>
             </div>
           </div>
 
