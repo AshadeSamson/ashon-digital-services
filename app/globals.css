@@ -32,6 +32,10 @@
   --pale-white: 243 244 246;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background-color: var(--background);

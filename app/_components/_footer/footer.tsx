@@ -2,8 +2,9 @@
 
 import React from "react";
 import styles from "./footer.module.css";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaCode } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhoneAlt, FaEnvelope, FaWhatsapp} from "react-icons/fa";
 import logo from '@/public/images/favicon.png'
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -15,30 +16,31 @@ const Footer: React.FC = () => {
               <img src={logo.src} alt="logoIcon" className={styles.codeIcon} />
               <span className={styles.logoText}>Ashon Digital Services</span>
             </div>
-            <p className={`${styles.tagline} text-center md:text-left mb-4`}>We craft digital experiences that drive business growth and engage your audience.</p>
+            <p className={`${styles.tagline} text-center md:text-left mb-4`}>We create smart, stunning websites that help your business grow online. Our focus is on clean design, modern tech, and digital experiences that convert.</p>
             <div className={styles.socialIcons}>
-              <a href="#"><FaFacebookF className={`text-xl`}/></a>
-              <a href="#"><FaTwitter className={`text-xl`}/></a>
-              <a href="#"><FaLinkedinIn className={`text-xl`}/></a>
-              <a href="#"><FaInstagram className={`text-xl`}/></a>
+              <Link href="#"><FaFacebookF className={`text-xl`}/></Link>
+              <Link href="#"><FaTwitter className={`text-xl`}/></Link>
+              <Link href="#"><FaLinkedinIn className={`text-xl`}/></Link>
+              <Link href="#"><FaInstagram className={`text-xl`}/></Link>
             </div>
           </div>
 
           <div className={`text-center`}>
             <h3 className={styles.columnTitle}>Quick Links</h3>
             <ul className={styles.linkList}>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#process">Our Process</a></li>
-              <li><a href="#work">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link href="#home">Home</Link></li>
+              <li><Link href="#services">Services</Link></li>
+              <li><Link href="#process">Our Process</Link></li>
+              <li><Link href="#portfolio">Our Portfolio</Link></li>
+              <li><Link href="#contact">Talk to Us</Link></li>
             </ul>
           </div>
 
           <div className={`flex flex-col items-center md:items-start`}>
             <h3 className={styles.columnTitle}>Contact Info</h3>
             <ul className={`${styles.contactList}`}>
-              <li><FaPhoneAlt className={styles.icon} /><span>(123) 456-7890</span></li>
+              <li><FaPhoneAlt className={styles.icon} /><span>(+234) 913-376-5081</span></li>
+              <li><FaWhatsapp className={styles.icon} /><span>(+234) 912-851-1154</span></li>
               <li><FaEnvelope className={styles.icon} /><span>contact@ashondigitals.site</span></li>
             </ul>
           </div>

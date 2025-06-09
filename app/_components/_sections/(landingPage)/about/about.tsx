@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './about.module.css';
 import teamImage from '../../../../../public/images/aboutImage.webp'; 
 import { FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 const About: React.FC = () => {
 
@@ -22,7 +23,7 @@ const About: React.FC = () => {
               <div className={styles.stat}><span className={styles.dotPurple}></span>Served Local & Global Clients</div>
               <div className={styles.stat}><span className={styles.dotGreen}></span>99% Client Satisfaction</div>
             </div>
-            <a href="#contact" className={styles.button}>Work With Us <FaArrowRight className="ml-2" /></a>
+            <Link href="#contact" scroll={true} className={styles.button}>Work With Us <FaArrowRight className="ml-2" /></Link>
           </div>
 
           <div className={`${styles.imageContainer} fade-in delay-1`}>
