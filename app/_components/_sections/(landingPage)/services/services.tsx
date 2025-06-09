@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './services.module.css';
-import { FaCode, FaMobileAlt, FaSearchDollar, FaShoppingCart, FaServer, FaChartLine, FaArrowRight } from 'react-icons/fa';
+import { FaCode, FaMobileAlt, FaSearchDollar, FaShoppingCart, FaServer, FaTeamspeak  } from 'react-icons/fa';
 
 const services = [
   {
     title: 'Custom Web Development',
-    description: 'Bespoke web applications built with modern frameworks like React and Node.js for optimal performance.',
+    description: 'Bespoke web applications that reflects you and engages your audience. Built with modern tools for optimal performance.',
     icon: <FaCode />, 
     color: 'primary'
   },
@@ -34,9 +34,9 @@ const services = [
     color: 'yellow'
   },
   {
-    title: 'Landing Pages & Sales Funnels',
-    description: 'Conversion-optimized landing pages designed for lead generation and sales.',
-    icon: <FaChartLine />, 
+    title: 'Web Design Consultation',
+    description: 'Indifferent about your project? Book a free consultation to discuss your needs and get strategic guidance and expert advice.',
+    icon: <FaTeamspeak />, 
     color: 'secondary'
   }
 ];

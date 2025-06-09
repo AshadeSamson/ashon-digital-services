@@ -1,13 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import PrivacyPolicy from "../_modals/privacyPolicy/privacyPolicy";
 import styles from "./footer.module.css";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhoneAlt, FaEnvelope, FaWhatsapp} from "react-icons/fa";
 import logo from '@/public/images/favicon.png'
 import Link from "next/link";
 
 const Footer: React.FC = () => {
+
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState<boolean>(false);
+
   return (
+    <>
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.gridBox}>
@@ -28,11 +33,11 @@ const Footer: React.FC = () => {
           <div className={`text-center`}>
             <h3 className={styles.columnTitle}>Quick Links</h3>
             <ul className={styles.linkList}>
-              <li><Link href="#home">Home</Link></li>
               <li><Link href="#services">Services</Link></li>
               <li><Link href="#process">Our Process</Link></li>
               <li><Link href="#portfolio">Our Portfolio</Link></li>
               <li><Link href="#contact">Talk to Us</Link></li>
+              <li><Link href="#privacy" id="privacy" onClick={() => setIsPrivacyOpen(true)}>Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -51,6 +56,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+    <PrivacyPolicy isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
+    </>
   );
 };
 
