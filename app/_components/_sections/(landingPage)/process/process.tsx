@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './process.module.css';
 import { FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 const steps = [
   {
@@ -49,9 +50,9 @@ const Process: React.FC = () => {
         </div>
 
         <div className={styles.ctaWrapper}>
-          <a href="#contact" className={styles.ctaButton}>
+          <Link href="#contact" scroll={true} className={styles.ctaButton}>
             Get Started With Us <FaArrowRight className="ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
