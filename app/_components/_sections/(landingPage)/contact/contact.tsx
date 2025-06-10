@@ -111,9 +111,12 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                   >
                     <option value="">Choose a service</option>
-                    <option>Cognitive Behavioral Therapy</option>
-                    <option>Mindfulness-Based Therapy</option>
-                    <option>Career & Life Coaching</option>
+                    <option>Custom Web Development</option>
+                    <option>E-Commerce Solutions</option>
+                    <option>Responsive Web Design</option>
+                    <option>SEO Optimization</option>
+                    <option>Web Maintenance & Support</option>
+                    <option>Web Consultation</option>
                     <option>Not sure - I'd like guidance</option>
                   </select>
                 </div>
