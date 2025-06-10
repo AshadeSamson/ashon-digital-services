@@ -1,22 +1,40 @@
+"use client";
+
 import React from 'react';
 import styles from './hero.module.css';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 
 
 const Hero = () => {
   return (
     <section className={styles.hero} id="home">
-        <h1 className={styles.heading}>
+        <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once:true }}
+            transition={{ duration: 1.0, delay: 0.4 }} 
+            className={styles.heading}>
           Smart <span className={styles.highlight}>Websites</span> Built to Grow Your Business
-        </h1>
-        <p className={styles.subheading}>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once:true }}
+          transition={{ duration: 1.0, delay: 0.4 }}  
+          className={styles.subheading}>
         From idea to launch, we bring your digital vision to life with expert web development, responsive design, and user-first solutions.
-        </p>
-        <div className={styles.ctaGroup}>
+        </motion.p>
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once:true }}
+          transition={{ duration: 1.5, delay: 0.4 }}
+          className={styles.ctaGroup}>
           <Link href="#contact" scroll={true}><button className={styles.button}>Start Your Project</button></Link>
           <Link href="#portfolio" scroll={true}><button className={styles.outlineButton}>See Our Work</button></Link>
-        </div>
+        </motion.div>
     </section>
   );
 };
