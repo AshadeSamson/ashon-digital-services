@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <header className={`${styles.header}`}>
-      <div className="container">
+      <div className={styles.container}>
       <div className={`${styles.headerContainer} }`}>
         <Link href="#home" scroll={true}>
           <div className="">

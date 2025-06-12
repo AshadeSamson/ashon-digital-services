@@ -4,11 +4,11 @@
 }
 
 .container {
-  @apply max-w-7xl mx-auto;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .content {
-  @apply flex flex-col justify-center;
+  @apply md:basis-2/5 flex flex-col justify-center;
 }
 
 .title {
@@ -28,11 +28,11 @@
 }
 
 .formContainer {
-  @apply md:w-2/5;
+  @apply md:w-2/5 bg-white flex justify-center items-center rounded-xl shadow-lg p-6;
 }
 
 .formWrapper {
-  @apply bg-white text-black rounded-xl shadow-lg p-6;
+  @apply bg-white text-black;
 }
 
 .formTitle {
@@ -56,5 +56,5 @@
 }
 
 .submitButton {
-  @apply w-full mt-2 bg-primary text-white py-3 rounded-md font-medium hover:bg-black transition duration-300 flex items-center justify-center;
+  @apply w-full mt-2 bg-primary text-white py-3 rounded-md font-medium hover:bg-black transition duration-300 flex items-center justify-center max-w-sm;
 }
