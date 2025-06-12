@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './process.module.css';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const steps = [
   {
@@ -29,12 +30,12 @@ const Process: React.FC = () => {
     <section id="process" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>
+          <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
             Our <span className={styles.highlight}>Development</span> Process
-          </h2>
-          <p className={styles.description}>
+          </motion.h2>
+          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
             A transparent, step-by-step approach to delivering exceptional results.
-          </p>
+          </motion.p>
         </div>
 
         <div className={styles.gridBox}>

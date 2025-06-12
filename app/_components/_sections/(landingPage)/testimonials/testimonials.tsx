@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './testimonials.module.css';
 import { FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -49,12 +50,12 @@ const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className={styles.section}>
       <div className={`${styles.header} fade-in`}>
-        <h3 className={styles.title}>
+        <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
           Client <span className={styles.highlight}>Testimonials</span>
-        </h3>
-        <p className={styles.description}>
+        </motion.h2>
+        <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
           Here's what our clients say about working with us.
-        </p>
+        </motion.p>
       </div>
 
       <div className={styles.sliderWrapper}>
