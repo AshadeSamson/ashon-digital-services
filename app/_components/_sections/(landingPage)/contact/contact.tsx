@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className={styles.signup}>
       <div className={styles.container}>
-        <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-8">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
           <div className={styles.content}>
             <h3 className={styles.title}>Ready to Own Your Web Presence?</h3>
             <p className={styles.description}>
