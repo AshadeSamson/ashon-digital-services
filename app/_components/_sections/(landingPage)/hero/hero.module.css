@@ -1,16 +1,32 @@
-.hero {
-    @apply relative bg-fixed w-full min-h-screen flex flex-col justify-center items-center text-center px-4 lg:px-1 py-8 md:py-16;
-    background: linear-gradient(to bottom right, rgb(var(--primary)), rgb(var(--black)) ); 
-  }
+.heroSection {
+    @apply relative w-full min-h-screen flex flex-col justify-center;
+}
+.heroSection::before {
+  @apply absolute inset-0 md:bg-fixed bg-no-repeat bg-cover bg-center md:bg-left-top;
+  content: '';
+  background-image: url('/images/hero.webp');
+  z-index: 0;
+}
+.heroSection::after {
+  @apply absolute inset-0 opacity-90;
+  content: '';
+  background: linear-gradient(to bottom right, rgb(var(--black)), rgb(var(--black)));
+  z-index: 1; 
+}
 
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.heroContent {
+    @apply relative z-10 w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 lg:px-1 py-8 lg:py-16 lg:mt-24;
+}
 
 .heading {
-  @apply text-4xl md:text-5xl font-extrabold text-white leading-tight;
+  @apply text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.highlight {
-}
 .subheading {
   @apply text-lg md:text-xl text-palewhite mt-4 max-w-2xl;
 }
