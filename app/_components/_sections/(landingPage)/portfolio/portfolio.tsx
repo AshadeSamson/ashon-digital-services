@@ -5,6 +5,7 @@ import styles from './portfolio.module.css';
 import { projects } from '@/app/_utils/fake_data/endpoint';
 import Link from 'next/link';
 import ProjectModal from '@/app/_components/_modals/projectShowcase/projectModal';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
 
@@ -18,10 +19,10 @@ const Portfolio = () => {
     <section id="portfolio" className={styles.portfolioSection}>
       <div className={styles.container}>
         <div className={styles.headerText}>
-          <h2 className={styles.title}>
+          <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
             Our Recent Works
-          </h2>
-          <p className={styles.description}>Each project is a unique challenge we embrace to deliver exceptional results.</p>
+          </motion.h2>
+          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>Each project is a unique challenge we embrace to deliver exceptional results.</motion.p>
         </div>
 
         <div className={styles.projectsGrid}>
