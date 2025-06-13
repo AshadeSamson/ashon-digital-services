@@ -8,7 +8,7 @@
   z-index: 0;
 }
 .heroSection::after {
-  @apply absolute inset-0 opacity-90;
+  @apply absolute inset-0 opacity-80;
   content: '';
   background: linear-gradient(to bottom right, rgb(var(--black)), rgb(var(--black)));
   z-index: 1; 
