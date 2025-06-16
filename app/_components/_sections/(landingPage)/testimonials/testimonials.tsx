@@ -27,13 +27,20 @@ const testimonials = [
     image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067851/TS_tcjd6f.jpg',
     stars: 5,
   },
+    {
+    name: 'Ogunyinka Yetunde ',
+    role: 'Brand Owner, Anna Kreationz',
+    quote: 'What I love most is how they genuinely cared about my vision and helped me bring it to life in a way that actually works. Super reliable and easy to work with.',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750070659/OY_qvecsz.jpg',
+    stars: 5,
+  },
   {
     name: 'Emmanuel Adeleke ',
     role: 'CEO, Dreamboat EnviroBuild',
     quote: 'Excellent service! They were professional, reliable, and delivered exactly what I needed. Highly recommended.',
     image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067841/DreamBoat_w2atuv.jpg',
     stars: 4,
-  }
+  },
 ];
 
 const Testimonials: React.FC = () => {
