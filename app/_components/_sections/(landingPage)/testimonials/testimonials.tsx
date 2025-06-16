@@ -7,23 +7,40 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'CEO, TechStart',
-    quote: 'Nam eget lectus in velit facilisis gravida. Sed sapien velit, ultrices ac porttitor non, faucibus eget arcu. Integer a viverra odio, at pretium nulla. In placerat erat libero, id aliquet lorem suscipit volutpat. Vivamus lectus orci, vehicula tempus lobortis id, iaculis eu lorem. Curabitur vestibulum auctor turpis ut finibus.s!',
-    image: 'https://randomuser.me/api/portraits/women/43.jpg'
+    name: 'Obot Essiet Jr.',
+    role: 'COO, LEAD Resources Ecosystem Limited',
+    quote: 'He consistently demonstrated patience, responsiveness, and promptness in addressing all our requests. His ability to understand and execute our vision as a management consulting firm resulted in a website that perfectly aligns with our brand and objectives. We highly recommend his services to anyone seeking a professional and dedicated web designer.',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067854/OO_xaeu6e.jpg',
+    stars: 5,
   },
   {
-    name: 'Michael Chen',
-    role: 'Marketing Director, Global Retail',
-    quote: 'Nam eget lectus in velit facilisis gravida. Sed sapien velit, ultrices ac porttitor non, faucibus eget arcu. Integer a viverra odio, at pretium nulla. In placerat erat libero, id aliquet lorem suscipit volutpat. Vivamus lectus orci, vehicula tempus lobortis id, iaculis eu lorem. Curabitur vestibulum auctor turpis ut finibus.',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg'
+    name: 'Oladodu Damilola',
+    role: 'CEO, DDBlings Jewelry ',
+    quote: 'One thing I really appreciated working with them was how quick they were to respond.',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067844/DDBlings_y5kvbk.png',
+    stars: 5,
   },
   {
-    name: 'Emma Rodriguez',
-    role: 'Founder, Creative Agency',
-    quote: 'Nam eget lectus in velit facilisis gravida. Sed sapien velit, ultrices ac porttitor non, faucibus eget arcu. Integer a viverra odio, at pretium nulla. In placerat erat libero, id aliquet lorem suscipit volutpat. Vivamus lectus orci, vehicula tempus lobortis id, iaculis eu lorem. Curabitur vestibulum auctor turpis ut finibus.',
-    image: 'https://randomuser.me/api/portraits/women/65.jpg'
-  }
+    name: 'Tolulope',
+    role: 'Creative Director',
+    quote: 'They are timely, communicated openly and, showed a high level of meticulousness in every detail.',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067851/TS_tcjd6f.jpg',
+    stars: 5,
+  },
+    {
+    name: 'Ogunyinka Yetunde ',
+    role: 'Brand Owner, Anna Kreationz',
+    quote: 'What I love most is how they genuinely cared about my vision and helped me bring it to life in a way that actually works. Super reliable and easy to work with.',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750070659/OY_qvecsz.jpg',
+    stars: 5,
+  },
+  {
+    name: 'Emmanuel Adeleke ',
+    role: 'CEO, Dreamboat EnviroBuild',
+    quote: 'Excellent service! They were professional, reliable, and delivered exactly what I needed. Highly recommended.',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067841/DreamBoat_w2atuv.jpg',
+    stars: 4,
+  },
 ];
 
 const Testimonials: React.FC = () => {
@@ -79,7 +96,7 @@ const Testimonials: React.FC = () => {
                   "{t.quote}"
                 </p>
                 <div className={styles.stars}>
-                  {Array(5).fill(0).map((_, i) => (
+                  {Array(t.stars).fill(0).map((_, i) => (
                     <FaStar key={i} className="text-yellow-400" />
                   ))}
                 </div>

@@ -71,7 +71,7 @@
 }
 
 .quote {
-  @apply text-gray-600 mb-6;
+  @apply text-left text-gray-600 mb-6;
 }
 
 .stars {
