@@ -52,7 +52,7 @@ const Header = () => {
     <header className={`${styles.header}`}>
       <div className={styles.container}>
       <div className={`${styles.headerContainer} }`}>
-        <Link href="#home" scroll={true}>
+        <Link href="/" scroll={true}>
           <div className="">
               {isMounted ? (
                 <Image
