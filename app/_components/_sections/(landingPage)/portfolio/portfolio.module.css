@@ -43,7 +43,7 @@
 }
 
 .projectCategory {
-  @apply text-sm text-brown font-medium;
+  @apply text-sm text-brown font-bold;
 }
 
 .projectTitle {
