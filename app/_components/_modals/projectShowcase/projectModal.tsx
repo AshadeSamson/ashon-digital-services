@@ -17,7 +17,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, videoSrc, 
       <div className={styles.modal}>
         <button onClick={onClose} className={styles.closeBtn}>&times;</button>
         <h3 className={styles.modalTitle}>{title}</h3>
-        <video className={styles.video} src={videoSrc} autoPlay controls />
+        <video className={styles.video} src={videoSrc} autoPlay playsInline controlsList="nodownload noplaybackrate" controls />
       </div>
     </div>
   );
