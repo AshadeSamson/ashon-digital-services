@@ -23,10 +23,10 @@ const Footer: React.FC = () => {
             </div>
             <p className={`${styles.tagline} text-center md:text-left mb-4`}>We create smart, stunning websites that help your business grow online. Our focus is on clean design, modern tech, and digital experiences that convert.</p>
             <div className={styles.socialIcons}>
-              <Link href="#"><FaFacebookF className={`text-xl`}/></Link>
-              <Link href="#"><FaTwitter className={`text-xl`}/></Link>
-              <Link href="#"><FaLinkedinIn className={`text-xl`}/></Link>
-              <Link href="#"><FaInstagram className={`text-xl`}/></Link>
+              <Link href="https://www.instagram.com/ashonservices"><FaInstagram className={`text-xl`}/></Link>
+              <Link href="https://www.linkedin.com/company/ashonservices"><FaLinkedinIn className={`text-xl`}/></Link>
+              <Link href="https://www.facebook.com/ashonservices"><FaFacebookF className={`text-xl`}/></Link>
+              <Link href="https://x.com/ashonservices"><FaTwitter className={`text-xl`}/></Link>
             </div>
           </div>
 
