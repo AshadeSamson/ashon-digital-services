@@ -4,15 +4,26 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaUser, FaCommentDots, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import styles from './contact.module.css';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
+
+type FormData = {
+  name?: string;
+  email?: string;
+  service?: string;
+  mobile?: string;
+  message?: string;
+};
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     service: '',
     mobile: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value } = e.target;
@@ -22,8 +33,41 @@ const Contact: React.FC = () => {
     }));
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const endpoint = "jfjfjk"
+
+    try {
+      setIsSubmitting(true);
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.message || 'We are sorry, we couldn\'t send your message. Please try again');
+        setIsSubmitting(false);
+      }
+
+      const data = await res.json();
+      toast.success('Your message has been sent successfully! We will get back to you soon.');
+      setFormData({ name: '', email: '', service: '', mobile: '', message: '' });
+      setIsSubmitting(false);
+      
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        toast.error('We are sorry, we couldn\'t send your message. Please try again');
+        setIsSubmitting(false);
+      } else {
+        toast.error('We are sorry, we couldn\'t send your message. Please try again');
+        setIsSubmitting(false);
+      } 
+    }
     console.log('Form submitted:', formData);
   }
 
@@ -132,7 +176,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                   ></textarea>
                 </div>
-                <button type="submit" className={styles.submitButton}>
+                <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
                   Message Us &nbsp; <FaCommentDots className="inline mr-2" />
                 </button>
               </form>
