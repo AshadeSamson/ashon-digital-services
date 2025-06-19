@@ -68,19 +68,19 @@ const Header = () => {
         </Link>
 
         <nav className={`${styles.nav}`}>
-          <Link href="#services" scroll={true} className={styles.navLinks}>
+          <Link href="/#services" scroll={true} className={styles.navLinks}>
             Our Services
           </Link>
-          <Link href="#about" scroll={true} className={styles.navLinks}>
+          <Link href="/#about" scroll={true} className={styles.navLinks}>
             About Us
           </Link>
-          <Link href="#faqs" scroll={true} className={styles.navLinks}>
+          <Link href="/#faqs" scroll={true} className={styles.navLinks}>
             FAQs
           </Link>
           <Link href="/blog" scroll={true} className={styles.navLinks}>
             Blog
           </Link>
-          <Link href="#contact" scroll={true} className={styles.navLinks}>
+          <Link href="/#contact" scroll={true} className={styles.navLinks}>
             Talk to Us
           </Link>
           {/* <Link href="#">
