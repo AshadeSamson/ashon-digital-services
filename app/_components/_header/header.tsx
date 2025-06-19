@@ -102,19 +102,19 @@ const Header = () => {
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${mobileMenu ? styles.mobileMenuOpen : ''}`}>
         <div className="container py-4 flex flex-col space-y-4">
-          <Link href="#services" scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
+          <Link href="/#services" scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             Our Services
           </Link>
-          <Link href="#about"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
+          <Link href="/#about"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             About Us
           </Link>
-          <Link href="#faqs"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
+          <Link href="/#faqs"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             FAQs
           </Link>
           <Link href="/blog"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             Blog
           </Link>
-          <Link href="#contact"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
+          <Link href="/#contact"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             Talk to Us
           </Link>
           {/* <div className="pt-4">
