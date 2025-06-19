@@ -77,6 +77,9 @@ const Header = () => {
           <Link href="#faqs" scroll={true} className={styles.navLinks}>
             FAQs
           </Link>
+          <Link href="/blog" scroll={true} className={styles.navLinks}>
+            Blog
+          </Link>
           <Link href="#contact" scroll={true} className={styles.navLinks}>
             Talk to Us
           </Link>
@@ -107,6 +110,9 @@ const Header = () => {
           </Link>
           <Link href="#faqs"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             FAQs
+          </Link>
+          <Link href="/blog"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
+            Blog
           </Link>
           <Link href="#contact"  scroll={true} className={styles.mobileNavLink} onClick={() => setMobileMenu(false)}>
             Talk to Us
