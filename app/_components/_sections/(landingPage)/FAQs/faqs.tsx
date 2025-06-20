@@ -43,8 +43,8 @@ const Faqs = () => {
   return (
     <section className={styles.faqContainer} id="faqs">
       <div className={styles.header}>
-        <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>Frequently Asked Questions</motion.h2>
-        <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>lorem ipsum lorem ipsum lorem ipsum lorem ipsun</motion.p>
+        <motion.h2 initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>Frequently Asked Questions</motion.h2>
+        <motion.p initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>lorem ipsum lorem ipsum lorem ipsum lorem ipsun</motion.p>
       </div>
       <div className={styles.faqList}>
         {faqs.map((faq, index) => (

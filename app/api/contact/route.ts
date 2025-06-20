@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+export const runtime = 'edge';
 
 // Basic in-memory rate limiter _______________________
 

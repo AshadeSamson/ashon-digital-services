@@ -37,8 +37,8 @@ const About: React.FC = () => {
                 className={styles.image}
               />
               <div className={styles.missionCard}>
-                <motion.h4 initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="font-bold mb-2">Our Mission</motion.h4>
-                <motion.p initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="text-sm text-gray-600">
+                <motion.h4 initial={{y:100, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="font-bold mb-2">Our Mission</motion.h4>
+                <motion.p initial={{y:100, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="text-sm text-gray-600">
                   To empower businesses through smart & innovative web solutions that drive growth and create meaningful connections with their audience.
                 </motion.p>
               </div>
