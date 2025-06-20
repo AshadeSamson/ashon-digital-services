@@ -30,10 +30,10 @@ const Process: React.FC = () => {
     <section id="process" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
+          <motion.h2 initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
             Our <span className={styles.highlight}>Development</span> Process
           </motion.h2>
-          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
+          <motion.p initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
             A transparent, step-by-step approach to delivering exceptional results.
           </motion.p>
         </div>
