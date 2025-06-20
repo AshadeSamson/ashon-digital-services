@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const endpoint = "jfjfjk"
+    const endpoint = "/api/contact"
 
     try {
       setIsSubmitting(true);
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
       
     } catch (error: unknown) {
       if (error instanceof Error) {
-        toast.error('We are sorry, we couldn\'t send your message. Please try again');
+        toast.error(error.message);
         setIsSubmitting(false);
       } else {
         toast.error('We are sorry, we couldn\'t send your message. Please try again');
