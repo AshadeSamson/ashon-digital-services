@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/home/ashade_samson/Documents/WEB_DEV_PROJECTS/ashon-services-website/app/layout":["static/media/5d258b355fefebcb-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
