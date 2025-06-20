@@ -49,17 +49,17 @@ const Services: React.FC = () => {
     <section id="services" className={styles.servicesSection}>
       <div className={styles.container}>
         <div className={styles.headerText}>
-          <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3 }} viewport={{once: true}} className={styles.title}>Our <span className={styles.highlight}>Services</span></motion.h2>
-          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>We offer comprehensive web solutions tailored to your business needs.</motion.p>
+          <motion.h2 initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3 }} viewport={{once: true}} className={styles.title}>Our <span className={styles.highlight}>Services</span></motion.h2>
+          <motion.p initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>We offer comprehensive web solutions tailored to your business needs.</motion.p>
         </div>
 
         <div className={styles.cardsGrid}>
           {services.map((service, idx) => (
             <div key={idx} className={styles.serviceCard}>
-              <motion.div initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.4}} viewport={{once: true}} className={`${styles.iconWrapper} ${styles[service.color]}`}>
+              <motion.div initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.4}} viewport={{once: true}} className={`${styles.iconWrapper} ${styles[service.color]}`}>
                 {service.icon}
               </motion.div>
-              <motion.h3 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.4}} viewport={{once: true}} className={styles.serviceTitle}>{service.title}</motion.h3>
+              <motion.h3 initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.4}} viewport={{once: true}} className={styles.serviceTitle}>{service.title}</motion.h3>
               <p>{service.description}</p>
             </div>
           ))}
