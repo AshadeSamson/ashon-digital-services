@@ -67,10 +67,10 @@ const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className={styles.section}>
       <div className={`${styles.header} fade-in`}>
-        <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
+        <motion.h2 initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
           Client <span className={styles.highlight}>Testimonials</span>
         </motion.h2>
-        <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
+        <motion.p initial={{y:200, opacity:0}} whileInView={{y:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
           Here's what our clients say about working with us.
         </motion.p>
       </div>
