@@ -76,16 +76,16 @@ const Contact: React.FC = () => {
       <div className={styles.container}>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
           <div className={styles.content}>
-            <h3 className={styles.title}>Ready to Own Your Web Presence?</h3>
+            <h3 className={styles.title}>Launch Offer: Get a Website That Means Business At a Friendly Price</h3>
             <p className={styles.description}>
-              Take the first step toward better mental health today. Our team is here to support you every step of the way.
+              We’re celebrating our launch by offering limited-time discounts on all web design and development packages. Whether it’s an ecommerce site, portfolio, or full-scale business website, now’s the perfect time to go live.
             </p>
             <div className={styles.buttonContainer}>
               <Link href="https://wa.link/1uww5s" 
                     className={styles.contactbutton}
                     target="_blank"
                     rel="noopener noreferrer">
-                      DM Us on WhatsApp
+                      Start Your Project Now
                       <FaArrowRight className="ml-2" /></Link>
             </div>
           </div>

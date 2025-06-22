@@ -71,7 +71,10 @@
 }
 
 .quote {
-  @apply text-left text-gray-600 mb-6;
+  @apply text-justify text-gray-600 mb-6;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-indent: 1em;
 }
 
 .stars {
@@ -83,7 +86,7 @@
 }
 
 .dot {
-  @apply w-3 h-3 rounded-full bg-gray-300 focus:outline-none;
+  @apply w-2 h-2 rounded-full bg-gray-300 focus:outline-none;
 }
 
 .active {

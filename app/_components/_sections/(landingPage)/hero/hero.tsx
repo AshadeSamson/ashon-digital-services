@@ -26,7 +26,7 @@ const Hero = () => {
             viewport={{ once:true }}
             transition={{ duration: 1.0, delay: 0.6 }}  
             className={styles.subheading}>
-          From idea to launch, we bring your digital vision to life with expert web development, responsive design, and user-first solutions.
+          Whether you're a startup, a growing brand, or a service-based company, from idea to launch, we bring your digital vision to life with user-friendly websites tailored to your business goals.
           </motion.p>
           <div 
             className={styles.ctaGroup}>

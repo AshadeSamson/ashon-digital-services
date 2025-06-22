@@ -7,29 +7,34 @@ import { motion } from 'framer-motion';
 
 const faqs = [
   {
-    question: "What is Terapeuta?",
+    question: "How long does it take to build a website?",
     answer:
-      "Terapeuta is a web application designed to connect clients with qualified therapists, providing professional therapy services to support mental health and wellness goals.",
+      "Every project is different, but most websites take 2 to 4 weeks depending on features and complexity. Ecommerce websites or custom web applications may take a bit longer. We’ll always agree on a clear timeline during the planning phase.",
   },
   {
-    question: "How can I book a session?",
+    question: "Can you design mobile-friendly websites?",
     answer:
-      "You can book a session by creating an account, logging in, and selecting a therapist of your choice. From there, you can choose an available time slot and confirm your booking.",
+      "Absolutely! We specialize in responsive web design, meaning your website will look and work great on all devices; phones, tablets, and desktops.",
   },
   {
-    question: "Is the AI chatbot a replacement for therapy?",
+    question: "Can I update my website after it’s launched?",
     answer:
-      "No, our AI chatbot is designed to complement your therapy, not replace it. It helps reinforce techniques between sessions, provides psychoeducation, and offers guided exercises. For clinical concerns, we always recommend working with a licensed therapist.",
+      "Yes, you can! We use intuitive platforms that make updates easy. Plus, we offer web maintenance & support plans in case you’d rather let us handle it.",
+  },
+    {
+    question: "How much does a website cost?",
+    answer:
+      "Our web design packages start at ₦180,000 for a basic, mobile-friendly business website. Prices vary depending on the type and complexity of the site. Starter ecommerce websites typically start at ₦250,000, while custom web applications prices vary depending on requested features. We provide a tailored quote after a free consultation, with no hidden fees or surprises.",
   },
   {
-    question: "Is my information secure?",
+    question: "Do you work with small businesses and startups?",
     answer:
-      "Yes, your data is securely stored using Firebase, ensuring confidentiality and compliance with data protection standards.",
+      "Definitely. We love helping small businesses, startups, and solo entrepreneurs bring their ideas to life. Whether you need a portfolio, an ecommerce store, or a full web application, we’ve got you covered.",
   },
   {
-    question: "What therapy types do you offer?",
+    question: "What if I don’t know exactly what I need?",
     answer:
-      "We offer a variety of therapeutic approaches including Cognitive Behavioral Therapy (CBT), Solution-focused Therapy, and Career & Life Coaching.",
+      "No problem! That’s what our web design consultation is for. We’ll guide you step by step and recommend the best solution based on your goals and budget.",
   },
 ];
 
@@ -44,7 +49,7 @@ const Faqs = () => {
     <section className={styles.faqContainer} id="faqs">
       <div className={styles.header}>
         <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>Frequently Asked Questions</motion.h2>
-        <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>lorem ipsum lorem ipsum lorem ipsum lorem ipsun</motion.p>
+        <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>Clear answers to help you feel confident about your next website.</motion.p>
       </div>
       <div className={styles.faqList}>
         {faqs.map((faq, index) => (

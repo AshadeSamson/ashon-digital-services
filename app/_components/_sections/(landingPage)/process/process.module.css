@@ -39,11 +39,11 @@
 }
 
 .cardTitle {
-  @apply text-xl font-bold text-black leading-normal;
+  @apply text-xl font-bold text-black leading-normal mb-2;
 }
 
 .cardText {
-  @apply text-gray-500 text-sm;
+  @apply text-gray-600 text-sm leading-relaxed;
 }
 
 .ctaWrapper {
