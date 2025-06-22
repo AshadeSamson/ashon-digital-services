@@ -9,19 +9,19 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     title: 'Discovery',
-    description: 'We dive deep to understand your business goals, target audience, and project requirements.',
+    description: 'We kick things off with a friendly consultation to learn about your business, brand, and goals. This is where we identify what makes your website truly stand out and how to position it to succeed.',
   },
   {
     title: 'Planning',
-    description: 'We create detailed project plans, wireframes, and specifications.',
+    description: 'From sitemap to user experience, we plan every page and interaction with clarity and purpose. You’ll get wireframes or mockups that show exactly how your site will look and function.',
   },
   {
     title: 'Implementation',
-    description: 'We get to work, and provide constant updates and feedback while at it.',
+    description: 'This is where the magic happens. We develop your site using clean code, responsive layouts, and SEO best practices to ensure it loads fast, works on all devices, and is easy to update.',
   },
   {
     title: 'Launch',
-    description: 'We thoroughly test and deploy your solution, then provide training and support.',
+    description: 'Once your website is tested, polished, and approved, we launch it for the world to see. We also provide training or ongoing support so you can manage your site with ease.',
   },
 ];
 
@@ -34,7 +34,7 @@ const Process: React.FC = () => {
             Our <span className={styles.highlight}>Development</span> Process
           </motion.h2>
           <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>
-            A transparent, step-by-step approach to delivering exceptional results.
+            A proven process, designed to deliver websites that are clean, effective, and conversion-ready.
           </motion.p>
         </div>
 

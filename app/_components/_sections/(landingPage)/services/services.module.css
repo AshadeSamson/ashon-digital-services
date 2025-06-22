@@ -35,6 +35,10 @@
   @apply w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white text-2xl;
 }
 
+.cardDesc {
+  @apply text-gray-600 text-sm md:text-base leading-relaxed;
+} 
+
 .primary {
   background-color: rgb(0, 91, 255);
 }

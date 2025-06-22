@@ -92,9 +92,9 @@ const Testimonials: React.FC = () => {
                     <p className={styles.role}>{t.role}</p>
                   </div>
                 </div>
-                <p className={styles.quote}>
+                <blockquote className={styles.quote}>
                   "{t.quote}"
-                </p>
+                </blockquote>
                 <div className={styles.stars}>
                   {Array(t.stars).fill(0).map((_, i) => (
                     <FaStar key={i} className="text-yellow-400" />

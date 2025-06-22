@@ -33,7 +33,7 @@ const About: React.FC = () => {
             <div className="relative">
               <img
                 src={teamImage.src}
-                alt="Our team"
+                alt="About Us"
                 className={styles.image}
               />
               <div className={styles.missionCard}>

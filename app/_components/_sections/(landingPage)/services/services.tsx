@@ -8,37 +8,37 @@ import { FaCode, FaMobileAlt, FaSearchDollar, FaShoppingCart, FaServer, FaTeamsp
 const services = [
   {
     title: 'Custom Web Development',
-    description: 'Bespoke web applications that reflects you and engages your audience. Built with modern tools for optimal performance.',
+    description: 'We build custom websites and applications from the ground up — clean code, seamless functionality, and scalable designs tailored to your unique business needs.',
     icon: <FaCode />, 
     color: 'primary'
   },
   {
     title: 'E-Commerce Solutions',
-    description: 'Online stores with secure checkout, inventory management, and conversion optimization.',
+    description: 'Get a modern ecommerce website that’s easy to manage, optimized for conversions, and built for growth. Whether you\'re launching your first product or scaling an online store, we make selling simple.',
     icon: <FaShoppingCart />, 
     color: 'brown'
   },
   {
     title: 'Responsive Web Design',
-    description: 'Mobile-first designs that adapt seamlessly to any device, ensuring perfect user experience everywhere.',
+    description: 'We design mobile-first, lightning-fast websites that look and feel amazing on phones, tablets, and desktops. Because great UX = more engagement.',
     icon: <FaMobileAlt />, 
     color: 'purple'
   },
   {
     title: 'SEO Optimization',
-    description: 'Technical SEO and strategy to drive your business to top of search rankings and boost organic traffic.',
+    description: 'We optimize your site structure, speed, and content to help you rank higher on Google and attract organic traffic that converts.',
     icon: <FaSearchDollar />, 
     color: 'green'
   },
   {
     title: 'Web Maintenance & Support',
-    description: 'Ongoing updates, performance optimization, and reliable support to keep you running smoothly.',
+    description: 'From bug fixes to content updates and technical support, we keep your website running smoothly long after launch.',
     icon: <FaServer />, 
     color: 'yellow'
   },
   {
     title: 'Web Design Consultation',
-    description: 'Indifferent about your project? Book a free consultation to discuss your needs and get strategic guidance and expert advice.',
+    description: 'Not sure where to start? We\'ll walk you through the process, help you clarify your goals, and recommend the best solution for your business.',
     icon: <FaTeamspeak />, 
     color: 'secondary'
   }
@@ -50,7 +50,7 @@ const Services: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.headerText}>
           <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3 }} viewport={{once: true}} className={styles.title}>Our <span className={styles.highlight}>Services</span></motion.h2>
-          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>We offer comprehensive web solutions tailored to your business needs.</motion.p>
+          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>We offer web solutions tailored to your business and get you results.</motion.p>
         </div>
 
         <div className={styles.cardsGrid}>
@@ -60,7 +60,7 @@ const Services: React.FC = () => {
                 {service.icon}
               </motion.div>
               <motion.h3 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.4}} viewport={{once: true}} className={styles.serviceTitle}>{service.title}</motion.h3>
-              <p>{service.description}</p>
+              <p className={styles.cardDesc}>{service.description}</p>
             </div>
           ))}
         </div>
