@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 
 // Basic in-memory rate limiter _______________________
@@ -33,7 +33,6 @@ function isRateLimited(ip: string): boolean {
 // __________________________________________________________
 
 
-const resend = new Resend(process.env.ACCESS_KEY)
 
 export async function POST(req: Request) {
 
@@ -59,33 +58,28 @@ export async function POST(req: Request) {
 
 
     try {
-        const contactMail = process.env.CONTACT_MAIL;
-        if (!contactMail) {
-            return NextResponse.json(
-                { message: 'Server Configuration Error'},
-                { status: 500}
-            )
-        }
+        
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: process.env.SENDER_MAIL!,
+                pass: process.env.ACCESS_KEY!,
+            }
+        })
 
-        const { data, error } = await resend.emails.send({
-            from: `Contact Form <ashadesamson99@gmail.com>`,
-            to: contactMail,
-            subject: 'New Contact Message',
+        await transporter.sendMail({
+            from: `"ADS Enquiry" <${process.env.SENDER_MAIL}>`,
+            to: process.env.ADMIN_MAIL!,
+            subject: 'New Contact Form Message',
             html: `
-                <h2>New Contact Submission</h2>
-                <p><strong>Name:</strong>Name: ${name}</p>
-                <p><strong>Email:</strong>Email: ${email}</p>
-                <p><strong>Email:</strong>Phone No: ${mobile}</p>
-                <p><strong>Email:</strong>Service Required: ${service}</p>
+                <h3>New Enquiry Received</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone No:</strong> ${mobile}</p>
+                <p><strong>Service:</strong> ${service}</p>
                 <p><strong>Message:</strong><br>${message}</p>
-            `,
-        });
-
-
-        if (error) {
-        console.error(error)
-        return NextResponse.json({ message: 'Failed to send email' }, { status: 500 });
-        }
+      `,
+        })
 
         return NextResponse.json(
             { message: 'Email sent successfully'},
