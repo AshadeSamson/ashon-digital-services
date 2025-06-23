@@ -16,7 +16,7 @@
 }
 
 .description {
-  @apply text-lg text-palewhite mb-6 leading-relaxed;
+  @apply text-base md:text-lg text-palewhite mb-6 leading-relaxed;
 }
 
 .buttonContainer {

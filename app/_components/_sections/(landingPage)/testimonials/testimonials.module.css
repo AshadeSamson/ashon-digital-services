@@ -71,7 +71,7 @@
 }
 
 .quote {
-  @apply text-justify text-gray-600 mb-6;
+  @apply  text-sm text-justify text-gray-600 mb-6;
   word-break: break-word;
   overflow-wrap: break-word;
   text-indent: 1em;
