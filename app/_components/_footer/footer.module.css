@@ -27,7 +27,7 @@
 }
 
 .tagline {
-  @apply mb-4;
+  @apply text-sm lg:text-base mb-4;
 }
 
 .socialIcons {
@@ -47,7 +47,7 @@
 }
 
 .linkList a {
-  @apply hover:text-white transition duration-300;
+  @apply text-sm lg:text-base hover:text-white transition duration-300;
 }
 
 .contactList {
@@ -55,7 +55,7 @@
 }
 
 .contactList li {
-  @apply flex items-center md:items-start justify-center md:justify-start;
+  @apply text-sm lg:text-base flex items-center md:items-start justify-center md:justify-start;
 }
 
 .icon {
@@ -66,7 +66,7 @@
   @apply border-t border-gray-800 mt-12 pt-8 text-center md:flex md:items-center md:justify-between;
 }
 
-.bottomBar p {
+.copy {
   @apply text-sm text-gray-400;
 }
 

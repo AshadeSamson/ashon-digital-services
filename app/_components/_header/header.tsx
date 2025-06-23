@@ -2,7 +2,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./header.module.css";
-import { useDarkMode } from "@/app/_context/themeContext";
 import Link from "next/link";
 import Image from "next/image";
 import logo2 from "../../../public/images/logo_2.png";
@@ -11,7 +10,7 @@ import { IconContext } from "react-icons"
 
 const Header = () => {
 
-    const { isDarkMode } = useDarkMode();
+
     const [isScrolled, setIsScrolled] = useState<Boolean | Number>(false);
     const [mobileMenu, setMobileMenu] = useState<Boolean>(false);
     const [isMounted, setIsMounted] = useState<Boolean>(false);

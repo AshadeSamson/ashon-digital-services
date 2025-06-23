@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.bottomBar}>
-          <p>&copy; 2025 Ashon Digital Services. All rights reserved.</p>
+          <p className={styles.copy}>&copy; 2025 Ashon Digital Services. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

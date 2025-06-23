@@ -33,43 +33,43 @@ const Contact: React.FC = () => {
     }));
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
 
-    const endpoint = "/api/contact"
+  const endpoint = "/api/contact";
+  setIsSubmitting(true);
 
-    try {
-      setIsSubmitting(true);
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.message || 'We are sorry, we couldn\'t send your message. Please try again');
-        setIsSubmitting(false);
-      }
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
-      const data = await res.json();
-      toast.success('Your message has been sent successfully! We will get back to you soon.');
-      setFormData({ name: '', email: '', service: '', mobile: '', message: '' });
-      setIsSubmitting(false);
-      
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        toast.error(error.message);
-        setIsSubmitting(false);
-      } else {
-        toast.error('We are sorry, we couldn\'t send your message. Please try again');
-        setIsSubmitting(false);
-      } 
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || 'We are sorry, we couldn\'t send your message. Please try again');
     }
-    console.log('Form submitted:', formData);
+
+    const data = await res.json();
+    toast.success('Your message has been sent successfully! We will get back to you soon.');
+    setFormData({ name: '', email: '', service: '', mobile: '', message: '' });
+
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      toast.error(error.message);
+    } else {
+      toast.error('We are sorry, we couldn\'t send your message. Please try again');
+    }
+  } finally {
+    setIsSubmitting(false);
   }
+
+  console.log('Form submitted:', formData);
+}
+
 
   return (
     <section id="contact" className={styles.signup}>
@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
                   ></textarea>
                 </div>
                 <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
-                  Message Us &nbsp; <FaCommentDots className="inline mr-2" />
+                  {isSubmitting ? "Sending..." : <>Message Us <FaCommentDots className="inline ml-2" /></>}
                 </button>
               </form>
             </div>
