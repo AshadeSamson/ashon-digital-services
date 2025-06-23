@@ -22,9 +22,9 @@ const About: React.FC = () => {
              Remote-first and serving clients globally, we collaborate seamlessly turning complex challenges into smart, intuitive solutions. Every project is a partnership. We listen, guide, and build with purpose, so your brand doesn't just look good online, it performs boldly.
             </p>
             <div className={styles.stats}>
-              <div className={styles.stat}><span className={styles.dotBlue}></span>25+ Projects Completed</div>
-              <div className={styles.stat}><span className={styles.dotPurple}></span>Served Local & Global Clients</div>
-              <div className={styles.stat}><span className={styles.dotGreen}></span>99% Client Satisfaction</div>
+              <div className={styles.stat}><span className={styles.dotBlue}></span><p>25+ Projects Completed</p></div>
+              <div className={styles.stat}><span className={styles.dotPurple}></span><p>Served Local & Global Clients</p></div>
+              <div className={styles.stat}><span className={styles.dotGreen}></span><p>99% Client Satisfaction</p></div>
             </div>
             <Link href="#contact" scroll={true} className={styles.button}>Work With Us <FaArrowRight className="ml-2" /></Link>
           </div>
@@ -39,7 +39,7 @@ const About: React.FC = () => {
               <div className={styles.missionCard}>
                 <motion.h4 initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="font-bold mb-2">Our Mission</motion.h4>
                 <motion.p initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="text-sm text-gray-600">
-                  To empower businesses through smart & innovative web solutions that drive growth and create meaningful connections with their audience.
+                  Our mission is to combine creativity, strategy, and technology to build websites that are not only beautiful but also functional, scalable, and results-driven.
                 </motion.p>
               </div>
             </div>

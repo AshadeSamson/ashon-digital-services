@@ -22,7 +22,7 @@ const Portfolio = () => {
           <motion.h2 initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.title}>
             Our Recent Works
           </motion.h2>
-          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>Each project is a unique challenge we embrace to deliver exceptional results.</motion.p>
+          <motion.p initial={{translateY:200, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.3}} viewport={{once: true}} className={styles.description}>A showcase of websites we’ve crafted to help businesses shine online.</motion.p>
         </div>
 
         <div className={styles.projectsGrid}>

@@ -28,7 +28,7 @@
 }
 
 .subheading {
-  @apply text-base md:text-lg text-palewhite mt-4 max-w-2xl;
+  @apply text-base lg:text-lg text-palewhite mt-4 max-w-2xl;
 }
 .ctaGroup {
   @apply mt-8 flex flex-col sm:flex-row gap-4;
