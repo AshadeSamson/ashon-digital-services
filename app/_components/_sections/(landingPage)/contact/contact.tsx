@@ -66,8 +66,6 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   } finally {
     setIsSubmitting(false);
   }
-
-  console.log('Form submitted:', formData);
 }
 
 
