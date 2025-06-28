@@ -24,7 +24,7 @@ const faqs = [
     {
     question: "How much does a website cost?",
     answer:
-      "Our web design packages start at ₦160,000 for a basic, mobile-friendly business website. Prices vary depending on the type and complexity of the site. Starter ecommerce websites typically start at ₦250,000, while custom web applications prices vary depending on requested features. We provide a tailored quote after a free consultation, with no hidden fees or surprises.",
+      "Our web design packages start at ₦180,000 for a basic, mobile-friendly business website. Prices vary depending on the type and complexity of the site. Starter ecommerce websites typically start at ₦250,000, while custom web applications prices vary depending on requested features. We provide a tailored quote after a free consultation, with no hidden fees or surprises.",
   },
   {
     question: "Do you work with small businesses and startups?",
