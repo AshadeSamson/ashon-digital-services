@@ -51,7 +51,7 @@
 }
 
 .card {
-  @apply bg-palewhite p-8 rounded-xl shadow-md;
+  @apply bg-palewhite p-8 rounded-xl shadow-md flex flex-col justify-between min-h-44;
 }
 
 .profile {
@@ -67,14 +67,15 @@
 }
 
 .role {
-  @apply text-sm text-gray-500;
+  @apply text-sm text-gray-600;
 }
 
 .quote {
-  @apply  text-sm text-justify text-gray-600 mb-6;
+  @apply text-sm text-justify text-gray-600 mb-6 overflow-y-auto;
+  max-height: 60px;
   word-break: break-word;
-  overflow-wrap: break-word;
   text-indent: 1em;
+  padding-right: 4px;
 }
 
 .stars {
@@ -83,6 +84,7 @@
 
 .dots {
   @apply flex justify-center mt-8 space-x-2;
+  
 }
 
 .dot {

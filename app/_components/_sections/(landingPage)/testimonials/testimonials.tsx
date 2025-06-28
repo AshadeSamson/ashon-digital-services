@@ -9,7 +9,7 @@ const testimonials = [
   {
     name: 'Obot Essiet Jr.',
     role: 'COO, LEAD Resources Ecosystem Limited',
-    quote: 'He consistently demonstrated patience, responsiveness, and promptness in addressing all our requests. His ability to understand and execute our vision as a management consulting firm resulted in a website that perfectly aligns with our brand and objectives. We highly recommend his services to anyone seeking a professional and dedicated web designer.',
+    quote: 'His ability to understand and execute our vision as a management consulting firm resulted in a website that perfectly aligns with our brand and objectives. We highly recommend his services to anyone seeking a professional and dedicated web designer.',
     image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067854/OO_xaeu6e.jpg',
     stars: 5,
   },
@@ -31,7 +31,7 @@ const testimonials = [
     name: 'Emmanuel Adeleke ',
     role: 'CEO, Dreamboat EnviroBuild',
     quote: 'Excellent service! They were professional, reliable, and delivered exactly what I needed. Highly recommended.',
-    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1750067841/DreamBoat_w2atuv.jpg',
+    image: 'https://res.cloudinary.com/da4tsxgwd/image/upload/v1751105705/dreamboat_zrpf2k.webp',
     stars: 4,
   },
 ];
@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
                 <div className={styles.profile}>
                   <img src={t.image} alt={t.name} className={styles.avatar} />
                   <div>
-                    <h4 className={styles.name}>{t.name}</h4>
+                    <h3 className={styles.name}>{t.name}</h3>
                     <p className={styles.role}>{t.role}</p>
                   </div>
                 </div>
@@ -102,20 +102,22 @@ const Testimonials: React.FC = () => {
           {testimonials.map((_, idx) => (
             <button
               key={idx}
+
               className={
                 idx === currentIndex
                   ? `${styles.dot} ${styles.active}`
                   : styles.dot
               }
+              aria-label={`Go to testimonial ${idx + 1}`}
               onClick={() => setCurrentIndex(idx)}
             ></button>
           ))}
         </div>
 
-        <button onClick={prevSlide} className={styles.prevBtn}>
+        <button onClick={prevSlide} className={styles.prevBtn} aria-label="Previous testimonial">
           <FaChevronLeft />
         </button>
-        <button onClick={nextSlide} className={styles.nextBtn}>
+        <button onClick={nextSlide} className={styles.nextBtn} aria-label="Next testimonial">
           <FaChevronRight />
         </button>
       </div>

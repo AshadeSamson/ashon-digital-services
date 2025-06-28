@@ -15,7 +15,7 @@
 }
 
 .codeIcon {
-  @apply w-5 mr-3;
+  @apply w-5 mr-3 min-w-5 h-5;
 }
 
 .logoText {

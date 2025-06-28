@@ -19,7 +19,7 @@ const About: React.FC = () => {
               At Ashon Digital Services, we craft web platforms designed to work hard for your business. Whether you are launching a new idea, refreshing your brand, or scaling operation, we blend strategic thinking with clean, scalable approaches to create experiences your users will love. 
             </p>
             <p className={styles.text}>
-             Remote-first and serving clients globally, we collaborate seamlessly turning complex challenges into smart, intuitive solutions. Every project is a partnership. We listen, guide, and build with purpose, so your brand doesn't just look good online, it performs boldly.
+             Built around flexibility and clear communication, we collaborate seamlessly turning complex challenges into smart, intuitive solutions. Every project is a partnership. We listen, guide, and build with purpose, so your brand doesn't just look good online, it performs boldly.
             </p>
             <div className={styles.stats}>
               <div className={styles.stat}><span className={styles.dotBlue}></span><p>25+ Projects Completed</p></div>

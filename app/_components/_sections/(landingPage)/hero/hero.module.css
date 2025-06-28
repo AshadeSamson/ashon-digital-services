@@ -34,10 +34,10 @@
   @apply mt-8 flex flex-col sm:flex-row gap-4;
 }
 .button {
-  @apply px-6 py-3 rounded-lg bg-primary text-black  shadow-lg hover:bg-brown font-medium transition-all;
+  @apply px-6 py-3 rounded-lg bg-primary text-black  shadow-lg hover:bg-brown font-medium transition-all min-h-12 min-w-40;
 }
 .outlineButton {
-  @apply px-6 py-3 rounded-lg border border-white text-white hover:bg-black font-medium transition-all;
+  @apply px-6 py-3 rounded-lg border border-white text-white hover:bg-black font-medium transition-all min-h-12 min-w-40;
 }
 
 

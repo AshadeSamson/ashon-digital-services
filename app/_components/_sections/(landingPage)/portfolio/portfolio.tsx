@@ -49,8 +49,11 @@ const Portfolio = () => {
           <ProjectModal
             isOpen={!!activeProject}
             onClose={closeModal}
-            videoSrc={activeProject.video}
             title={activeProject.title}
+            description={activeProject.description}
+            features={activeProject.features || []}
+            techStack={activeProject.techStack || []}
+            imageSrc={activeProject.image}
           />
         )}
 
