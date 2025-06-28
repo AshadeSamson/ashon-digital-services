@@ -37,7 +37,7 @@ const About: React.FC = () => {
                 className={styles.image}
               />
               <div className={styles.missionCard}>
-                <motion.h4 initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="font-bold mb-2">Our Mission</motion.h4>
+                <motion.h3 initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="font-bold mb-2">Our Mission</motion.h3>
                 <motion.p initial={{translateY:100, opacity:0}} whileInView={{translateY:0, opacity:1}}  transition={{duration:0.7}} viewport={{once: true}} className="text-sm text-gray-600">
                   Our mission is to combine creativity, strategy, and technology to build websites that are not only beautiful but also functional, scalable, and results-driven.
                 </motion.p>
