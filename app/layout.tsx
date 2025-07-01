@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Open_Sans } from "next/font/google";
 import Header from "./_components/_header/header";
 import Footer from "./_components/_footer/footer";
@@ -50,26 +51,26 @@ export default function RootLayout({
 }>) {
 
 
-  const trackingID = process.env.MEASUREMENT_ID;
+  const trackingID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
 
   
   return (
     <html lang="en">
-      <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${trackingID}`}
-      />
-      <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${trackingID}');
-            `,
-          }}
-      />
       <body className={`relative ${openSans.className}  antialiased`}>
+            <Script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${trackingID}`}
+            />
+            <Script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${trackingID}');
+                  `,
+                }}
+            />
           <Header />
           <main>
             {children}
