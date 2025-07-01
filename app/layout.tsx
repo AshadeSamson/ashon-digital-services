@@ -49,9 +49,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
+  const trackingID = process.env.MEASUREMENT_ID;
+
   
   return (
     <html lang="en">
+      <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${trackingID}`}
+      />
+      <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${trackingID}');
+            `,
+          }}
+      />
       <body className={`relative ${openSans.className}  antialiased`}>
           <Header />
           <main>
