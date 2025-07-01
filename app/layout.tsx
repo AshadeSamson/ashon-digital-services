@@ -14,10 +14,32 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ashon Digital Services",
-  description: "Web Development Services Provider",
-  keywords:
-    'web development, web design, javascript, react, node, angular, vue, html, css, wordpress, typescript',
+  title: `Top Website Designer & Developer ${new Date().getFullYear()} | Ashon Digital Services`,
+  description: "Best website design and development services in Nigeria. We build stunning websites that help businesses grow online. From landing pages to full web apps, we deliver clean, modern, high-converting designs",
+  keywords: [
+    'web development', 'web design', 'javascript', 'react.js', 'next js', 'html', 'css', 'wordpress', 'typescript', 'digital agency', 'website design', 'website development', 'responsive design', 'e-commerce', 'SEO', 'custom websites', 'web applications', 'frontend development', 'backend development', 'full-stack development', 'ashondigitals.site'],
+    openGraph: {
+    title: 'Ashon Digital Services',
+    description: 'Smart, stunning websites for your business growth.',
+    url: 'https://ashondigitals.site',
+    siteName: 'Ashon Digital Services',
+    images: [
+      {
+        url: 'https://ashondigitals.site/public/images/logo_2.png',
+        width: 913,
+        height: 227,
+        alt: 'Ashon Digital Services',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ashonservices',
+    title: 'Ashon Digital Services',
+    description: 'Smart, stunning websites for your business growth.',
+    images: ['https://ashondigitals.site/public/images/logo_2.png'],
+  }
 };
 
 
