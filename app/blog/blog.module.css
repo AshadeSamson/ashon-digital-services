@@ -1,81 +1,65 @@
 .main {
-  min-height: 80vh;
-  background-color: #fff;
+  min-height: 100vh;
+  background-color: rgb(6, 6, 6);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
-  padding-top: 100px;
 }
 
 .mainContent {
-  max-width: 48rem;
-  text-align: center;
-  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
+  color: rgb(255, 255, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.iconContainer {
-  width: 6rem;
-  height: 6rem;
-  margin: 0 auto 2rem;
-  border-radius: 50%;
-  background: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(255, 255, 240));
+.textSplit {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .textSplit {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
 }
 
 .headline {
   font-size: 2.25rem;
   font-weight: 800;
-  color: #060606;
-  margin-bottom: 1.5rem;
+  color: white;
   line-height: 1.2;
+  max-width: 22rem;
 }
 
-@media (min-width: 768px) {
-  .headline {
-    font-size: 3rem;
-  }
-}
 
 .subtext {
   font-size: 1rem;
-  color: #555;
-  max-width: 36rem;
-  margin: 0 auto 2.5rem;
+  color: rgb(212, 212, 212);
+  max-width: 24rem;
   line-height: 1.6;
 }
 
-.buttonGroup {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-direction: column;
+.divider {
+  background-color: rgb(255, 255, 240);
+  width: 30%;
+  height: 2px;
 }
 
-@media (min-width: 640px) {
-  .buttonGroup {
-    flex-direction: row;
+@media (min-width: 768px) {
+  .divider {
+    width: 2px;
+    height: 4rem;
+    margin: 0 2rem;
   }
-}
-
-.contactButton {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border: 2px solid rgb(6, 6, 6);
-  background-color: transparent;
-  color: rgb(6, 6, 6);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contactButton:hover {
-  background-color: rgb(6, 6, 6);
-  border-color: rgb(6, 6, 6);
-  color: white;
 }
 
 .gradientText {
@@ -83,14 +67,4 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.floating {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
 }
