@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
 
 
-  const trackingID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
+  const trackingID = "G-92CBM6B83F";
 
   
   return (
