@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './blog.module.css';
+import Head from 'next/head';
 
 
 export const metadata = {
@@ -13,6 +14,9 @@ const Blog = () => {
 
   return (
     <>
+      <Head>
+        <link rel="canonical" href="https://ashondigitals.site/blog" />
+      </Head>
       <section className={styles.main}>
         <div className={styles.mainContent}>
           <div className={styles.textSplit}>
