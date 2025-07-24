@@ -1,19 +1,14 @@
 .main {
   min-height: 100vh;
-  background-color: rgb(6, 6, 6);
+  background-color: rgb(var(--black));
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
 }
 
-.mainContent {
-  max-width: 80rem;
-  width: 100%;
-  color: rgb(255, 255, 240);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .textSplit {
@@ -22,6 +17,7 @@
   align-items: center;
   text-align: center;
   gap: 2rem;
+  margin: 75px auto 50px;
 }
 
 @media (min-width: 768px) {
@@ -29,6 +25,7 @@
     flex-direction: row;
     text-align: left;
     justify-content: center;
+    margin: 100px auto 75px;
   }
 }
 
@@ -39,7 +36,6 @@
   line-height: 1.2;
   max-width: 22rem;
 }
-
 
 .subtext {
   font-size: 1rem;
@@ -67,4 +63,66 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: rgb(var(--white));
+  color: rgb(var(--black));
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  max-width: 350px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.cardImage {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cardExcerpt {
+  font-size: 0.875rem;
+  color: rgb(55, 65, 81); /* gray-700 */
+}
+
+.cardDate {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgb(107, 114, 128); /* gray-500 */
 }

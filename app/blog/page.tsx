@@ -1,37 +1,62 @@
-import React from 'react';
 import styles from './blog.module.css';
-import Head from 'next/head';
+import Link from 'next/link';
 
+export default function BlogPage() {
 
-export const metadata = {
-  title: 'Blog | Web Design, Development & Digital Growth Insights – Ashon Digital Services',
-  description: 'Discover expert tips, tutorials, and case studies on web design, development, and digital strategy. Stay informed with the latest insights from Ashon Digital Services.',
-};
-
-
-const Blog = () => {
-
+  const posts = [
+    {
+      title: '5 Common Website Mistakes Local Businesses Make',
+      excerpt: 'Learn how to avoid the top website pitfalls that can turn customers away...',
+      slug: 'website-mistakes',
+      date: '2025-07-20',
+      image: '/images/hero.webp',
+    },
+    {
+      title: 'The Power of a Fast Website',
+      excerpt: 'Speed isn’t just nice — it affects your SEO, sales, and user experience. Here’s how...',
+      slug: 'website-speed',
+      date: '2025-07-15',
+      image: '/images/aboutImage.webp',
+    },
+    {
+      title: 'The Power of a Fast Website',
+      excerpt: 'Speed isn’t just nice — it affects your SEO, sales, and user experience. Here’s how...',
+      slug: 'website-speed',
+      date: '2025-07-15',
+      image: '/images/hero.webp',
+    },
+  ];
 
   return (
-    <>
-      <Head>
-        <link rel="canonical" href="https://ashondigitals.site/blog" />
-      </Head>
-      <section className={styles.main}>
-        <div className={styles.mainContent}>
-          <div className={styles.textSplit}>
+    <main className={styles.main}>
+      <div className={styles.container}>
+        {/* Intro Section */}
+        <section className={styles.textSplit}>
+          <div>
             <h1 className={styles.headline}>
-              <span className={styles.gradientText}>Our Blog</span><br /> is Coming Soon
+              Our <span className={styles.gradientText}>Insights</span>
             </h1>
-            <div className={styles.divider}></div>
-            <p className={styles.subtext}>
-              We’re working behind the scenes to launch a resourceful blog packed with insights on web development, design trends, and business growth. Stay tuned!
-            </p>
           </div>
-        </div>
-      </section>
-    </>
-  );
-};
+          <div className={styles.divider} />
+          <p className={styles.subtext}>
+            Tips, updates, and web development insights to help your business grow online.
+          </p>
+        </section>
 
-export default Blog;
+        {/* Blog Grid */}
+        <section className={styles.grid}>
+          {posts.map(post => (
+            <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
+              <img src={post.image} alt={post.title} className={styles.cardImage} />
+              <div className={styles.cardContent}>
+                <h2 className={styles.cardTitle}>{post.title}</h2>
+                <p className={styles.cardExcerpt}>{post.excerpt}</p>
+                <span className={styles.cardDate}>{post.date}</span>
+              </div>
+            </Link>
+          ))}
+        </section>
+      </div>
+    </main>
+  );
+}
