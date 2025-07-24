@@ -6,13 +6,16 @@ import { portableTextComponents } from '@/sanity/lib/portableText';
 
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 
 export default async function BlogPost({ params }: Props) {
 
-  const post = await client.fetch(singlePostQuery, { slug: params.slug });
+  const { slug } = await params;
+
+
+  const post = await client.fetch(singlePostQuery, { slug });
 
 
   return (
