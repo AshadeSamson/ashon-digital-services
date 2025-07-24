@@ -42,12 +42,12 @@ export default async function BlogPage() {
         {/* Blog Grid */}
         <section className={styles.grid}>
           {posts.map(post => (
-            <Link key={post.slug.current} href={`/blog/${post.slug}`} className={styles.card}>
+            <Link key={post.slug.current} href={`/blog/${post.slug.current}`} className={styles.card}>
               <img src={post.mainImage?.asset.url} alt={post.title} className={styles.cardImage} />
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{post.title}</h2>
                 <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                <span className={styles.cardDate}>{post.publishedAt}</span>
+                <span className={styles.cardDate}>{post.publishedAt.split("T")[0]}</span>
               </div>
             </Link>
           ))}
