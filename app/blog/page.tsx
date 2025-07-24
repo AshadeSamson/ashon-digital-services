@@ -1,31 +1,27 @@
 import styles from './blog.module.css';
 import Link from 'next/link';
+import { client } from '@/sanity/lib/client';
+import { allPostsQuery } from '@/sanity/lib/queries';
+import { urlFor } from '@/sanity/lib/image';
 
-export default function BlogPage() {
 
-  const posts = [
-    {
-      title: '5 Common Website Mistakes Local Businesses Make',
-      excerpt: 'Learn how to avoid the top website pitfalls that can turn customers away...',
-      slug: 'website-mistakes',
-      date: '2025-07-20',
-      image: '/images/hero.webp',
-    },
-    {
-      title: 'The Power of a Fast Website',
-      excerpt: 'Speed isn’t just nice — it affects your SEO, sales, and user experience. Here’s how...',
-      slug: 'website-speed',
-      date: '2025-07-15',
-      image: '/images/aboutImage.webp',
-    },
-    {
-      title: 'The Power of a Fast Website',
-      excerpt: 'Speed isn’t just nice — it affects your SEO, sales, and user experience. Here’s how...',
-      slug: 'website-speed',
-      date: '2025-07-15',
-      image: '/images/hero.webp',
-    },
-  ];
+
+type Post = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  excerpt: string;
+  publishedAt: string;
+  mainImage?: { asset: { url: string } };
+  author?: { name: string; image?: { asset: { url: string } } };
+  categories?: { title: string }[];
+};
+
+
+
+export default async function BlogPage() {
+
+  const posts: Post[] = await client.fetch(allPostsQuery);
 
   return (
     <main className={styles.main}>
@@ -46,12 +42,12 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <section className={styles.grid}>
           {posts.map(post => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
-              <img src={post.image} alt={post.title} className={styles.cardImage} />
+            <Link key={post.slug.current} href={`/blog/${post.slug}`} className={styles.card}>
+              <img src={post.mainImage?.asset.url} alt={post.title} className={styles.cardImage} />
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{post.title}</h2>
                 <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                <span className={styles.cardDate}>{post.date}</span>
+                <span className={styles.cardDate}>{post.publishedAt}</span>
               </div>
             </Link>
           ))}
