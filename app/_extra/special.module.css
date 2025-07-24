@@ -1,0 +1,70 @@
+.main {
+  min-height: 100vh;
+  background-color: rgb(6, 6, 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.mainContent {
+  max-width: 80rem;
+  width: 100%;
+  color: rgb(255, 255, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textSplit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .textSplit {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+}
+
+.headline {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  max-width: 22rem;
+}
+
+
+.subtext {
+  font-size: 1rem;
+  color: rgb(212, 212, 212);
+  max-width: 24rem;
+  line-height: 1.6;
+}
+
+.divider {
+  background-color: rgb(255, 255, 240);
+  width: 30%;
+  height: 2px;
+}
+
+@media (min-width: 768px) {
+  .divider {
+    width: 2px;
+    height: 4rem;
+    margin: 0 2rem;
+  }
+}
+
+.gradientText {
+  background: linear-gradient(90deg, rgb(0, 91, 255), rgb(0, 91, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

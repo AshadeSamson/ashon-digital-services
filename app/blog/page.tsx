@@ -1,37 +1,58 @@
-import React from 'react';
 import styles from './blog.module.css';
-import Head from 'next/head';
+import Link from 'next/link';
+import { client } from '@/sanity/lib/client';
+import { allPostsQuery } from '@/sanity/lib/queries';
+import { urlFor } from '@/sanity/lib/image';
 
 
-export const metadata = {
-  title: 'Blog | Web Design, Development & Digital Growth Insights – Ashon Digital Services',
-  description: 'Discover expert tips, tutorials, and case studies on web design, development, and digital strategy. Stay informed with the latest insights from Ashon Digital Services.',
+
+type Post = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  excerpt: string;
+  publishedAt: string;
+  mainImage?: { asset: { url: string } };
+  author?: { name: string; image?: { asset: { url: string } } };
+  categories?: { title: string }[];
 };
 
 
-const Blog = () => {
 
+export default async function BlogPage() {
+
+  const posts: Post[] = await client.fetch(allPostsQuery);
 
   return (
-    <>
-      <Head>
-        <link rel="canonical" href="https://ashondigitals.site/blog" />
-      </Head>
-      <section className={styles.main}>
-        <div className={styles.mainContent}>
-          <div className={styles.textSplit}>
+    <main className={styles.main}>
+      <div className={styles.container}>
+        {/* Intro Section */}
+        <section className={styles.textSplit}>
+          <div>
             <h1 className={styles.headline}>
-              <span className={styles.gradientText}>Our Blog</span><br /> is Coming Soon
+              Our <span className={styles.gradientText}>Insights</span>
             </h1>
-            <div className={styles.divider}></div>
-            <p className={styles.subtext}>
-              We’re working behind the scenes to launch a resourceful blog packed with insights on web development, design trends, and business growth. Stay tuned!
-            </p>
           </div>
-        </div>
-      </section>
-    </>
-  );
-};
+          <div className={styles.divider} />
+          <p className={styles.subtext}>
+            Tips, updates, and web development insights to help your business grow online.
+          </p>
+        </section>
 
-export default Blog;
+        {/* Blog Grid */}
+        <section className={styles.grid}>
+          {posts.map(post => (
+            <Link key={post.slug.current} href={`/blog/${post.slug}`} className={styles.card}>
+              <img src={post.mainImage?.asset.url} alt={post.title} className={styles.cardImage} />
+              <div className={styles.cardContent}>
+                <h2 className={styles.cardTitle}>{post.title}</h2>
+                <p className={styles.cardExcerpt}>{post.excerpt}</p>
+                <span className={styles.cardDate}>{post.publishedAt}</span>
+              </div>
+            </Link>
+          ))}
+        </section>
+      </div>
+    </main>
+  );
+}
