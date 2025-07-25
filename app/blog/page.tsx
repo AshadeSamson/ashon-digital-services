@@ -1,10 +1,8 @@
 import styles from './blog.module.css';
 import Link from 'next/link';
 import { client } from '@/sanity/lib/client';
-import { allPostsQuery } from '@/sanity/lib/queries';
-import { urlFor } from '@/sanity/lib/image';
-
-
+import { paginatedPostsQuery, totalPostsQuery } from '@/sanity/lib/queries';
+import { intlDateFormat } from '../_lib/dateFormat';
 
 type Post = {
   _id: string;
@@ -17,11 +15,21 @@ type Post = {
   categories?: { title: string }[];
 };
 
+type Props = {
+  searchParams?:  Promise<{ page?: string }>;
+};
 
+const POSTS_PER_PAGE = 12;
 
-export default async function BlogPage() {
+export default async function BlogPage({ searchParams }: Props) {
+  const {page} = await searchParams || {};
+  const currentPage = Number(page ?? '1');
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const end = start + POSTS_PER_PAGE;
 
-  const posts: Post[] = await client.fetch(allPostsQuery);
+  const posts: Post[] = await client.fetch(paginatedPostsQuery,{start, end});
+  const totalPosts: number = await client.fetch(totalPostsQuery);
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
   return (
     <main className={styles.main}>
@@ -42,15 +50,31 @@ export default async function BlogPage() {
         {/* Blog Grid */}
         <section className={styles.grid}>
           {posts.map(post => (
-            <Link key={post.slug.current} href={`/blog/${post.slug.current}`} className={styles.card}>
+            <Link key={post._id} href={`/blog/${post.slug.current}`} className={styles.card}>
               <img src={post.mainImage?.asset.url} alt={post.title} className={styles.cardImage} />
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{post.title}</h2>
                 <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                <span className={styles.cardDate}>{post.publishedAt.split("T")[0]}</span>
+                <span className={styles.cardDate}>{intlDateFormat(post.publishedAt.split("T")[0])}</span>
               </div>
             </Link>
           ))}
+        </section>
+
+        {/* Pagination Controls */}
+        <section className={styles.pagination}>
+          {Array.from({ length: totalPages }).map((_, i) => {
+            const pageNum = i + 1;
+            return (
+              <Link
+                key={pageNum}
+                href={`/blog?page=${pageNum}`}
+                className={`${styles.pageLink} ${currentPage === pageNum ? styles.activePage : ''}`}
+              >
+                {pageNum}
+              </Link>
+            );
+          })}
         </section>
       </div>
     </main>
