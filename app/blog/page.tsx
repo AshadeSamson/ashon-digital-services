@@ -16,7 +16,7 @@ type Post = {
 };
 
 type Props = {
-  searchParams?: { page?: string };
+  searchParams?:  Promise<{ page?: string }>;
 };
 
 const POSTS_PER_PAGE = 12;
