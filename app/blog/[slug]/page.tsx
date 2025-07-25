@@ -4,6 +4,7 @@ import { singlePostQuery } from '@/sanity/lib/queries';
 import { PortableText } from '@portabletext/react';
 import { portableTextComponents } from '@/sanity/lib/portableText';
 import Link from 'next/link';
+import { intlDateFormat } from '@/app/_lib/dateFormat';
 
 
 type Props = {
@@ -24,7 +25,7 @@ export default async function BlogPost({ params }: Props) {
       <article className={styles.post}>
         <header className={styles.header}>
           <h1 className={styles.title}>{post.title}</h1>
-          <p className={styles.date}>{`Published on ${post.publishedAt.split("T")[0]}`}</p>
+          <p className={styles.date}>{`Published on ${intlDateFormat(post.publishedAt.split("T")[0])}`}</p>
           <div className={styles.divider}></div>
           <img
             src={post.mainImage?.asset.url}

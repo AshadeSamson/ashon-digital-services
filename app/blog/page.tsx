@@ -2,6 +2,7 @@ import styles from './blog.module.css';
 import Link from 'next/link';
 import { client } from '@/sanity/lib/client';
 import { paginatedPostsQuery, totalPostsQuery } from '@/sanity/lib/queries';
+import { intlDateFormat } from '../_lib/dateFormat';
 
 type Post = {
   _id: string;
@@ -54,7 +55,7 @@ export default async function BlogPage({ searchParams }: Props) {
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{post.title}</h2>
                 <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                <span className={styles.cardDate}>{post.publishedAt.split("T")[0]}</span>
+                <span className={styles.cardDate}>{intlDateFormat(post.publishedAt.split("T")[0])}</span>
               </div>
             </Link>
           ))}
