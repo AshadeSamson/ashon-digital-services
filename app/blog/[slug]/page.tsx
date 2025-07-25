@@ -3,6 +3,7 @@ import { client } from '@/sanity/lib/client';
 import { singlePostQuery } from '@/sanity/lib/queries';
 import { PortableText } from '@portabletext/react';
 import { portableTextComponents } from '@/sanity/lib/portableText';
+import Link from 'next/link';
 
 
 type Props = {
@@ -35,7 +36,15 @@ export default async function BlogPost({ params }: Props) {
         <section className={styles.content}>
           <PortableText value={post.body} components={portableTextComponents} />
         </section>
+
+        <div className={styles.backLinkWrapper}>
+          <Link href="/blog" className={styles.backLink}>
+            ← Back to all blogs
+          </Link>
+        </div>
       </article>
+
+
     </main>
   );
 }

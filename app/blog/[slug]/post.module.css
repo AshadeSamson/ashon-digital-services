@@ -63,3 +63,22 @@
 .content p {
   margin: 0;
 }
+
+.backLinkWrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-block;
+  color: rgb(var(--primary));
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: rgb(var(--primary));
+  text-decoration: underline;
+}
+

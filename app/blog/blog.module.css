@@ -126,3 +126,34 @@
   font-size: 0.75rem;
   color: rgb(107, 114, 128); /* gray-500 */
 }
+
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pageLink {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(var(--pale-white));
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgb(var(--pale-white));
+  transition: all 0.2s ease;
+}
+
+
+@media (min-width: 768px) {
+.pageLink:hover {
+  background-color: rgb(var(--pale-white));
+}
+}
+
+.activePage {
+  font-weight: bold;
+  background-color: rgb(var(--primary));
+  color: rgb(var(--white));
+  border-color: rgb(var(--primary));
+}
