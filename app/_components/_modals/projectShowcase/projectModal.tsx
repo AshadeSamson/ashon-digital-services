@@ -9,7 +9,7 @@ interface ProjectModalProps {
   description: string;
   features: string[];
   techStack: string[];
-  imageSrc?: string; // optional image
+  imageSrc?: string; 
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
