@@ -5,19 +5,40 @@ import { PortableText } from '@portabletext/react';
 import { portableTextComponents } from '@/sanity/lib/portableText';
 import Link from 'next/link';
 import { intlDateFormat } from '@/app/_lib/dateFormat';
+import { cache } from 'react';
 
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const getPost = cache((query: string, params: any) => client.fetch(query, params));
+
+
+export async function generateMetadata({ params }: Props) {
+
+  const { slug } = await params;
+  const post = await getPost(singlePostQuery, { slug });
+  
+
+  const desc = post.excerpt
+    ? `${post.excerpt}`
+    : `Learn more about our services. ${post.seoKeywords.join(', ')}`;
+
+    return {
+    title: `${post.seoKeywords[0]} | ${post.title}`,
+    description: desc,
+    keywords: post.seoKeywords.join(', '),
+    }
+}
+
+
+
 
 export default async function BlogPost({ params }: Props) {
 
   const { slug } = await params;
-
-
-  const post = await client.fetch(singlePostQuery, { slug });
+  const post = await getPost(singlePostQuery, { slug });
 
 
   return (

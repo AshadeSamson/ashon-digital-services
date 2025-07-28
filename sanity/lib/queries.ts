@@ -59,6 +59,7 @@ export const singlePostQuery = `
     slug,
     publishedAt,
     excerpt,
+    seoKeywords,
     mainImage {
       asset -> { url }
     },
