@@ -50,7 +50,13 @@ export const totalPostsQuery = `
   count(*[_type == "post"])
 `;
 
-
+export const singlePostListQuery = `
+  *[_type == "post" && defined(slug.current)] {
+    "slug": slug.current,
+    publishedAt,
+    _updatedAt
+  }
+`;
 
 export const singlePostQuery = `
   *[_type == "post" && slug.current == $slug][0] {
