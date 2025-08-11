@@ -15,13 +15,17 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `Top Website Designer & Developer ${new Date().getFullYear()} | Ashon Digital Services`,
-  description: "Best website design and development services in Nigeria. We build stunning websites that help businesses grow online. From landing pages to full web apps, we deliver clean, modern, high-converting designs",
+  title: `Website Designer - Web Developer in Nigeria | Ashon Digital Services`,
+  description: "Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs",
+  metadataBase: new URL('https://ashondigitals.site'),
+  alternates: {
+    canonical: './',
+  },
   keywords: [
     'web development', 'web design', 'javascript', 'react.js', 'next js', 'html', 'css', 'wordpress', 'typescript', 'digital agency', 'website design', 'website development', 'responsive design', 'e-commerce', 'SEO', 'custom websites', 'web applications', 'frontend development', 'backend development', 'full-stack development', 'ashondigitals.site'],
     openGraph: {
     title: 'Ashon Digital Services',
-    description: 'Smart, stunning websites for your business growth.',
+    description: 'Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs',
     url: 'https://ashondigitals.site',
     siteName: 'Ashon Digital Services',
     images: [
@@ -38,9 +42,16 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@ashonservices',
     title: 'Ashon Digital Services',
-    description: 'Smart, stunning websites for your business growth.',
+    description: 'Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs',
     images: ['https://ashondigitals.site/public/images/logo_2.png'],
   }
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Ashon Digital Services",
+  url: "https://ashondigitals.site",
 };
 
 
@@ -70,6 +81,10 @@ export default function RootLayout({
                     gtag('config', '${trackingID}');
                   `,
                 }}
+            />
+            <Script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
           <Header />
           <main>
