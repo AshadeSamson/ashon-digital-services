@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props) {
     : `Learn more about our services. ${post.seoKeywords.join(', ')}`;
 
     return {
-    title: `${post.seoKeywords[0]} | ${post.title}`,
+    title: `${post.title} - ${post.seoKeywords[0]}`,
     description: desc,
     keywords: post.seoKeywords.join(', '),
     }

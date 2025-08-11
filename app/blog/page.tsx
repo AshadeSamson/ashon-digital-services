@@ -24,7 +24,7 @@ const POSTS_PER_PAGE = 12;
 
 export async function generateMetadata() {
   return {
-    title: 'Blog | Insights and Articles on Web Design, Development, Tech, and More',
+    title: 'Blog | Insights and Articles on Web Design, Web Development, Tech, and More',
     description: 'Discover expert insights on web design, web development & mobile app creation tailored for businesses in Nigeria, Africa, UK & more. Browse guides, tips & case studies',
     keywords: 'blog, web development, insights, tips, updates, web design, mobile app development, technology, business growth, SEO, digital marketing, web design trends, web development trends, mobile app trends, business tips, digital transformation',
   };
