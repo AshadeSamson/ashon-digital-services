@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import Head from "next/head";
 import { Open_Sans } from "next/font/google";
 import Header from "./_components/_header/header";
 import Footer from "./_components/_footer/footer";
@@ -50,9 +49,24 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Ashon Digital Services",
-  url: "https://ashondigitals.site",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Ashon Digital Services",
+      "url": "https://ashondigitals.site",
+    },
+    {
+      "@type": "WebPage",
+      "name": "Blog | Insights and Articles on Web Design, Web Development, Tech, and More",
+      "description": "Discover expert insights on web design, web development & mobile app creation tailored for businesses in Nigeria, Africa, UK & more. Browse guides, tips & case studies",
+      "headline": "Blog | Insights and Articles on Web Design, Web Development, Tech, and More",
+      "url": "https://ashondigitals.site/blog",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://ashondigitals.site"
+        }
+    },
+  ]
 };
 
 
@@ -68,14 +82,14 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <Head>
+      <head>
         <Script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(structuredData).replace(/</g, '\\u003c')
             }}
         />
-      </Head>
+      </head>
       <body className={`relative ${openSans.className}  antialiased`}>
             <Script
                 async
