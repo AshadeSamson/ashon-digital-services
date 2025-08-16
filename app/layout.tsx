@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Head from "next/head";
 import { Open_Sans } from "next/font/google";
 import Header from "./_components/_header/header";
 import Footer from "./_components/_footer/footer";
@@ -15,7 +16,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `Website Designer - Web Developer in Nigeria | Ashon Digital Services`,
+  title: `Website Designer & Web Developer in Nigeria | Ashon Digital Services`,
   description: "Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs",
   metadataBase: new URL('https://ashondigitals.site'),
   alternates: {
@@ -67,6 +68,14 @@ export default function RootLayout({
   
   return (
     <html lang="en">
+      <Head>
+        <Script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(structuredData).replace(/</g, '\\u003c')
+            }}
+        />
+      </Head>
       <body className={`relative ${openSans.className}  antialiased`}>
             <Script
                 async
@@ -81,10 +90,6 @@ export default function RootLayout({
                     gtag('config', '${trackingID}');
                   `,
                 }}
-            />
-            <Script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
           <Header />
           <main>
