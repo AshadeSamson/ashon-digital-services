@@ -13,13 +13,47 @@
   justify-content: center;
   z-index: 50;
   box-shadow: 0 4px 8px var(--shadow);
-  transition: background-color 0.3s ease;
+  background: var(--whatsapp-green);
+  overflow: hidden;
 }
 
 .whatsapp:hover {
-  background-color: #1ebe5d;
+  filter: brightness(1.1);
 }
 
 .icon {
   font-size: 1.5rem;
 }
+
+
+/* ✨ Shine overlay */
+.whatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    -120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: shineSwipe 3s infinite;
+}
+
+/* 🌟 Light swipe animation */
+@keyframes shineSwipe {
+  0% {
+    left: -75%;
+  }
+  60% {
+    left: 125%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
