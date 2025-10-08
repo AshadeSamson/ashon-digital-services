@@ -63,7 +63,16 @@ export default async function BlogPage({ searchParams }: Props) {
               <img src={post.mainImage?.asset.url} alt={post.title} className={styles.cardImage} />
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{post.title}</h2>
-                <p className={styles.cardExcerpt}>{post.excerpt}</p>
+                <p className={styles.cardExcerpt}>
+                  {post.excerpt.length > 160
+                    ? `${post.excerpt.slice(0, 160)}... `
+                    : post.excerpt}
+                  {post.excerpt.length > 160 && (
+                    <Link href={`/blog/${post.slug.current}`} className={styles.readMore}>
+                      Read more →
+                    </Link>
+                  )}
+                </p>
                 <span className={styles.cardDate}>{intlDateFormat(post.publishedAt.split("T")[0])}</span>
               </div>
             </Link>
