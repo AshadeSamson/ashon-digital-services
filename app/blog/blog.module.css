@@ -118,7 +118,25 @@
 
 .cardExcerpt {
   font-size: 0.875rem;
-  color: rgb(55, 65, 81); /* gray-700 */
+  color: rgb(55, 65, 81);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMore {
+  color: var(--primary-color); 
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.readMore:hover {
+  color: var(--secondary-color);
 }
 
 .cardDate {
@@ -148,6 +166,7 @@
 @media (min-width: 768px) {
 .pageLink:hover {
   background-color: rgb(var(--pale-white));
+  color: rgb(var(--black));
 }
 }
 
