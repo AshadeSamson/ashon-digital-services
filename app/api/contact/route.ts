@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 
+
+export const runtime = 'nodejs';
 // Basic in-memory rate limiter _______________________
 
 const rateLimitWindow = 60 * 1000;
