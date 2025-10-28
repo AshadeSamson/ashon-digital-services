@@ -1,6 +1,9 @@
 *.ts linguist-language=TypeScript
 *.tsx linguist-language=TypeScript
-*.js linguist-language=JavaScript
-.next/* linguist-vendored
-dist/* linguist-vendored
-.open-next/* linguist-vendored
+.next/** linguist-vendored
+dist/** linguist-vendored
+.open-next/** linguist-vendored
+public/js/** linguist-vendored
+build/** linguist-vendored
+out/** linguist-vendored
+node_modules/** linguist-vendored
