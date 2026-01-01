@@ -105,16 +105,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                    />                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className={`${styles.formInput} !pl-10`}
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
+                    />  
                   </div>
                 </div>
                 <div className={styles.formGroup}>
@@ -131,7 +122,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                       onChange={handleChange}
                       required
                     />
-             c      </div>
+                  </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="mobile" className={styles.formLabel}>Whatsapp Number</label>
