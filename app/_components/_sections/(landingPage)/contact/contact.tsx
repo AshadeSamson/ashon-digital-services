@@ -74,9 +74,9 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       <div className={styles.container}>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
           <div className={styles.content}>
-            <h3 className={styles.title}>Launch Offer: Get a Website That Means Business At a Friendly Price</h3>
+            <h3 className={styles.title}>Start a conversation about your website</h3>
             <p className={styles.description}>
-              We’re celebrating our launch by offering limited-time discounts on all web design and development packages. Whether it’s an ecommerce site, portfolio, or full-scale business website, now’s the perfect time to go live.
+              Whether you need a new site or an upgrade, we’re here to help you make informed decisions that support your business.
             </p>
             <div className={styles.buttonContainer}>
               <Link href="https://wa.link/1uww5s" 
@@ -105,6 +105,15 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                    />                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className={`${styles.formInput} !pl-10`}
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
@@ -122,7 +131,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                       onChange={handleChange}
                       required
                     />
-                  </div>
+             c      </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="mobile" className={styles.formLabel}>Whatsapp Number</label>
