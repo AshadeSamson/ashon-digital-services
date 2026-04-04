@@ -1,0 +1,173 @@
+/* ── Page wrapper ──────────────────────────────────────────── */
+.main {
+  @apply min-h-screen bg-white;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* ── Hero section ──────────────────────────────────────────── */
+.heroSection {
+  @apply relative w-full flex flex-col justify-center;
+  min-height: 70vh;
+}
+
+.heroSection::before {
+  @apply absolute inset-0 md:bg-fixed bg-no-repeat bg-cover bg-center md:bg-left-top;
+  content: '';
+  background-image: url('/images/hero.webp');
+  z-index: 0;
+}
+
+.heroSection::after {
+  @apply absolute inset-0 opacity-85;
+  content: '';
+  background: linear-gradient(to bottom right, rgb(var(--black)), rgb(var(--black)));
+  z-index: 1;
+}
+
+.heroContent {
+  @apply relative z-10 w-full lg:w-3/5 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 lg:px-1 py-16 lg:py-24;
+  margin-top: 64px;
+}
+
+.heroEyebrow {
+  @apply text-sm font-semibold uppercase tracking-widest mb-4;
+  color: rgb(var(--primary));
+}
+
+.heroHeading {
+  @apply text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubheading {
+  @apply text-base lg:text-lg mb-8 max-w-2xl;
+  color: rgb(var(--pale-white));
+}
+
+.heroCta {
+  @apply flex flex-col sm:flex-row gap-4;
+}
+
+.ctaButton {
+  @apply inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-brown transition duration-300;
+}
+
+.ctaOutline {
+  @apply inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-black transition duration-300;
+}
+
+/* ── Shared section header ─────────────────────────────────── */
+.sectionHeader {
+  @apply text-center mb-12 px-5 sm:px-0;
+}
+
+.sectionTitle {
+  @apply text-4xl md:text-5xl font-extrabold mt-2 mb-2 md:mb-4 text-black;
+}
+
+.sectionDescription {
+  @apply max-w-2xl mx-auto text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed;
+}
+
+.highlight {
+  color: rgb(0 91 255);
+}
+
+/* ── Services card grid ────────────────────────────────────── */
+.servicesSection {
+  @apply py-16 md:py-24 bg-white;
+}
+
+.cardsGrid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.serviceCard {
+  @apply bg-palewhite shadow-lg rounded-xl p-6 text-left space-y-4 hover:shadow-xl transition duration-300;
+}
+
+.iconWrapper {
+  @apply w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white text-2xl;
+}
+
+.primary  { background-color: rgb(0, 91, 255); }
+.secondary { background-color: rgb(88, 188, 130); }
+.brown    { background-color: rgb(224, 109, 6); }
+.purple   { background-color: rgb(111, 66, 193); }
+.green    { background-color: rgb(34, 197, 94); }
+.yellow   { background-color: rgb(234, 179, 8); }
+
+.serviceTitle {
+  @apply text-lg font-bold text-black;
+}
+
+.cardDesc {
+  @apply text-gray-600 text-sm md:text-base leading-relaxed;
+}
+
+.featureList {
+  @apply flex flex-col gap-2 pt-2;
+}
+
+.featureItem {
+  @apply flex items-start gap-2 text-sm text-gray-700;
+}
+
+.checkIcon {
+  @apply text-secondary mt-0.5 shrink-0;
+}
+
+/* ── Process section ───────────────────────────────────────── */
+.processSection {
+  @apply py-16 md:py-24 bg-palewhite;
+}
+
+.processGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.processCard {
+  @apply bg-white p-6 rounded-xl shadow-md transition duration-300;
+}
+
+.stepCircle {
+  @apply w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary;
+}
+
+.stepNumber {
+  @apply text-white text-2xl font-bold;
+}
+
+.processCardTitle {
+  @apply text-xl font-bold text-black leading-normal mb-2;
+}
+
+.processCardText {
+  @apply text-gray-600 text-sm leading-relaxed;
+}
+
+/* ── CTA Banner ────────────────────────────────────────────── */
+.ctaBanner {
+  @apply py-16 md:py-24;
+  background: linear-gradient(to bottom right, rgb(var(--primary)), rgb(var(--black)));
+}
+
+.ctaBannerInner {
+  @apply text-center text-white;
+}
+
+.ctaBannerTitle {
+  @apply text-3xl md:text-5xl font-extrabold mb-4;
+}
+
+.ctaBannerDesc {
+  @apply text-base lg:text-lg mb-8 max-w-2xl mx-auto;
+  color: rgb(var(--pale-white));
+}
+
+.ctaBannerBtn {
+  @apply inline-flex items-center px-8 py-3 text-base font-medium rounded-md shadow-sm text-primary bg-white hover:bg-black hover:text-white transition duration-300;
+}
