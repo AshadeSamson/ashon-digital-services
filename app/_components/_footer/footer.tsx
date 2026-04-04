@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               <img src={logo.src} alt="logoIcon" className={styles.codeIcon} />
               <span className={styles.logoText}>Ashon Digital Services</span>
             </div>
-            <p className={`${styles.tagline} text-center md:text-left mb-4`}>We create smart, stunning websites that help your business grow online. Our focus is on clean design, modern tech, and digital experiences that convert.</p>
+            <p className={`${styles.tagline} text-center md:text-left mb-4`}>Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online.</p>
             <div className={styles.socialIcons}>
               <Link href="https://www.instagram.com/ashonservices" target="_blank" aria-label="Follow us on Instagram"><FaInstagram className={`text-xl`}/></Link>
               <Link href="https://www.linkedin.com/company/ashonservices" target="_blank" aria-label="Follow us on Linkedin"><FaLinkedinIn className={`text-xl`}/></Link>
@@ -33,10 +33,10 @@ const Footer: React.FC = () => {
           <div className={`text-center`}>
             <h3 className={styles.columnTitle}>Quick Links</h3>
             <ul className={styles.linkList}>
-              <li><Link href="/#services">Services</Link></li>
+              <li><Link href="/services">Services</Link></li>
               <li><Link href="/#process">Our Process</Link></li>
               <li><Link href="/#portfolio">Our Portfolio</Link></li>
-              <li><Link href="/#contact">Talk to Us</Link></li>
+              <li><Link href="/contact">Talk to Us</Link></li>
               <li><Link href="#privacy" id="privacy" onClick={() => setIsPrivacyOpen(true)}>Privacy Policy</Link></li>
             </ul>
           </div>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.bottomBar}>
-          <p className={styles.copy}>&copy; 2025 Ashon Digital Services. All Rights Reserved.</p>
+          <p className={styles.copy}>&copy; 2026 Ashon Digital Services. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

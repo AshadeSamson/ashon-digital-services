@@ -1,0 +1,163 @@
+/* ── Page wrapper ──────────────────────────────────────────── */
+.main {
+  @apply min-h-screen bg-white;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* ── Hero section ──────────────────────────────────────────── */
+.heroSection {
+  @apply relative w-full flex flex-col justify-center;
+  min-height: 50vh;
+}
+
+.heroSection::before {
+  @apply absolute inset-0 md:bg-fixed bg-no-repeat bg-cover bg-center md:bg-left-top;
+  content: '';
+  background-image: url('/images/hero.webp');
+  z-index: 0;
+}
+
+.heroSection::after {
+  @apply absolute inset-0 opacity-85;
+  content: '';
+  background: linear-gradient(to bottom right, rgb(var(--black)), rgb(var(--black)));
+  z-index: 1;
+}
+
+.heroContent {
+  @apply relative z-10 w-full lg:w-3/5 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 lg:px-1 py-16 lg:py-24;
+  margin-top: 64px;
+}
+
+.heroEyebrow {
+  @apply text-sm font-semibold uppercase tracking-widest mb-4;
+  color: rgb(var(--primary));
+}
+
+.heroHeading {
+  @apply text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubheading {
+  @apply text-base lg:text-lg max-w-2xl;
+  color: rgb(var(--pale-white));
+}
+
+.highlight {
+  color: rgb(0 91 255);
+}
+
+/* ── Contact section ───────────────────────────────────────── */
+.contactSection {
+  @apply py-16 md:py-24 bg-white;
+}
+
+.contactLayout {
+  @apply flex flex-col lg:flex-row gap-12 lg:gap-16 items-start;
+}
+
+/* ── Info column ───────────────────────────────────────────── */
+.infoColumn {
+  @apply lg:w-2/5 flex flex-col;
+}
+
+.infoTitle {
+  @apply text-3xl md:text-4xl font-extrabold text-black mb-4;
+}
+
+.infoSubtext {
+  @apply text-gray-600 text-sm md:text-base leading-relaxed mb-8;
+}
+
+.infoCards {
+  @apply flex flex-col gap-5 mb-8;
+}
+
+.infoCard {
+  @apply flex items-center gap-4 bg-palewhite rounded-xl p-4 shadow-sm;
+}
+
+.infoIconWrapper {
+  @apply w-11 h-11 rounded-full flex items-center justify-center text-white text-lg shrink-0;
+  background-color: rgb(var(--primary));
+}
+
+.infoLabel {
+  @apply text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5;
+}
+
+.infoValue {
+  @apply text-sm md:text-base font-medium text-black;
+}
+
+.whatsappButton {
+  @apply inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-black transition duration-300 self-start;
+}
+
+/* ── Form column ───────────────────────────────────────────── */
+.formColumn {
+  @apply lg:w-3/5;
+}
+
+.formWrapper {
+  @apply bg-palewhite rounded-xl shadow-lg p-6 md:p-8 text-black;
+}
+
+.formTitle {
+  @apply text-xl font-bold mb-6;
+}
+
+.form {
+  @apply flex flex-col gap-4;
+}
+
+.formGroup {
+  @apply flex flex-col;
+}
+
+.formLabel {
+  @apply text-sm font-bold mb-2;
+}
+
+.formInput {
+  @apply bg-white border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-full mb-2;
+}
+
+.submitButton {
+  @apply w-full mt-2 bg-primary text-white py-3 rounded-md font-medium hover:bg-black transition duration-300 flex items-center justify-center;
+}
+
+/* ── CTA Banner ────────────────────────────────────────────── */
+.ctaBanner {
+  @apply py-16 md:py-24;
+  background: linear-gradient(to bottom right, rgb(var(--primary)), rgb(var(--black)));
+}
+
+.ctaBannerInner {
+  @apply text-center text-white;
+}
+
+.ctaBannerTitle {
+  @apply text-3xl md:text-5xl font-extrabold mb-4;
+}
+
+.ctaBannerDesc {
+  @apply text-base lg:text-lg mb-8 max-w-2xl mx-auto;
+  color: rgb(var(--pale-white));
+}
+
+.ctaBannerActions {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.ctaBannerBtnPrimary {
+  @apply inline-flex items-center px-8 py-3 text-base font-medium rounded-md shadow-sm text-primary bg-white hover:bg-black hover:text-white transition duration-300;
+}
+
+.ctaBannerBtnOutline {
+  @apply inline-flex items-center px-8 py-3 text-base font-medium rounded-md border border-white text-white hover:bg-black transition duration-300;
+}
