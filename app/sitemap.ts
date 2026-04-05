@@ -3,7 +3,7 @@ import { client } from "@/sanity/lib/client";
 import { singlePostListQuery } from "@/sanity/lib/queries";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.BASE_URL || "https://ashondigitals.site";
+  const baseUrl = process.env.BASE_URL || "https://ashondigitals.com";
 
   const posts: { slug: string; publishedAt?: string; _updatedAt?: string }[] =
     await client.fetch(singlePostListQuery);

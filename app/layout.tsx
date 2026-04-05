@@ -17,7 +17,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: `Website Designer & Web Developer in Nigeria | Ashon Digital Services`,
   description: "Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs",
-  metadataBase: new URL('https://ashondigitals.site'),
+  metadataBase: new URL('https://ashondigitals.com'),
   alternates: {
     canonical: './',
   },
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
     icon: '/images/favicon.ico',
   },
   keywords: [
-    'web development', 'web design', 'javascript', 'react.js', 'next js', 'html', 'css', 'wordpress', 'typescript', 'digital agency', 'website design', 'website development', 'responsive design', 'e-commerce', 'SEO', 'custom websites', 'web applications', 'frontend development', 'backend development', 'full-stack development', 'ashondigitals.site'],
+    'web development', 'web design', 'javascript', 'react.js', 'next js', 'html', 'css', 'wordpress', 'typescript', 'digital agency', 'website design', 'website development', 'responsive design', 'e-commerce', 'SEO', 'custom websites', 'web applications', 'frontend development', 'backend development', 'full-stack development', 'ashondigitals.com'],
     openGraph: {
     title: 'Ashon Digital Services',
     description: 'Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs',
-    url: 'https://ashondigitals.site',
+    url: 'https://ashondigitals.com',
     siteName: 'Ashon Digital Services',
     images: [
       {
-        url: 'https://ashondigitals.site/public/images/logo_2.png',
+        url: 'https://ashondigitals.com/public/images/logo_2.png',
         width: 913,
         height: 227,
         alt: 'Ashon Digital Services',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     site: '@ashonservices',
     title: 'Ashon Digital Services',
     description: 'Best website design services provider in Nigeria. We build affordable websites and offer web development that help businesses grow online. Serves Lagos and areas nationwide, from landing pages to full websites, we deliver clean, modern, high-converting designs',
-    images: ['https://ashondigitals.site/public/images/logo_2.png'],
+    images: ['https://ashondigitals.com/public/images/logo_2.png'],
   }
 };
 
@@ -56,17 +56,17 @@ const structuredData = {
     {
       "@type": "WebSite",
       "name": "Ashon Digital Services",
-      "url": "https://ashondigitals.site",
+      "url": "https://ashondigitals.com",
     },
     {
       "@type": "WebPage",
       "name": "Blog | Insights and Articles on Web Design, Web Development, Tech, and More",
       "description": "Discover expert insights on web design, web development & mobile app creation tailored for businesses in Nigeria, Africa, UK & more. Browse guides, tips & case studies",
       "headline": "Blog | Insights and Articles on Web Design, Web Development, Tech, and More",
-      "url": "https://ashondigitals.site/blog",
+      "url": "https://ashondigitals.com/blog",
       "isPartOf": {
         "@type": "WebSite",
-        "url": "https://ashondigitals.site"
+        "url": "https://ashondigitals.com"
         }
     },
   ]

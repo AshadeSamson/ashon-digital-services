@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             <ul className={`${styles.contactList}`}>
               <li><FaPhoneAlt className={styles.icon} /><span>(+234) 913-376-5081</span></li>
               <li><FaWhatsapp className={styles.icon} /><span>(+234) 912-851-1154</span></li>
-              <li><FaEnvelope className={styles.icon} /><span>contact@ashondigitals.site</span></li>
+              <li><FaEnvelope className={styles.icon} /><span>contact@ashondigitals.com</span></li>
             </ul>
           </div>
         </div>

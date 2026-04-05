@@ -164,7 +164,7 @@ const ContactPageContent: React.FC = () => {
                   </div>
                   <div>
                     <p className={styles.infoLabel}>Email</p>
-                    <p className={styles.infoValue}>contact@ashondigitals.site</p>
+                    <p className={styles.infoValue}>contact@ashondigitals.com</p>
                   </div>
                 </div>
 

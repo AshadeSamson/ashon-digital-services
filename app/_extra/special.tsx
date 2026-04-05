@@ -15,7 +15,7 @@ const Blog = () => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://ashondigitals.site/blog" />
+        <link rel="canonical" href="https://ashondigitals.com/blog" />
       </Head>
       <section className={styles.main}>
         <div className={styles.mainContent}>

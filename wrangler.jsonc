@@ -7,7 +7,7 @@
   ],
     "routes": [
     {
-      "pattern": "ashondigitals.site",
+      "pattern": "ashondigitals.com",
       "custom_domain": true
     }
   ],
